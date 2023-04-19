@@ -69,7 +69,9 @@ export default ({ ...props }) => {
       ) : (
         iconLeft && (
           <span
-            className={[styles["elc_ui-input-icon-left"], "icon-left"].join(" ")}
+            className={[styles["elc_ui-input-icon-left"], "icon-left"].join(
+              " "
+            )}
           >
             {iconLeft}
           </span>
@@ -99,7 +101,9 @@ export default ({ ...props }) => {
       ></input>
       {iconRight && (
         <span
-          className={[styles["elc_ui-input-icon-right"], "icon-right"].join(" ")}
+          className={[styles["elc_ui-input-icon-right"], "icon-right"].join(
+            " "
+          )}
         >
           {iconRight}
         </span>

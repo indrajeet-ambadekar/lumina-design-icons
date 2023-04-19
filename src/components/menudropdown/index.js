@@ -9,7 +9,8 @@ const MenuDropdown = ({ ...props }) => {
 
   const listenToClick = (el) => {
     if (
-      (el.target && el.target.closest(".elc_ui-menu-dropdown-wrapper") === null) ||
+      (el.target &&
+        el.target.closest(".elc_ui-menu-dropdown-wrapper") === null) ||
       (el.target && el.target.closest(".elc_ui-menu-item") !== null)
     ) {
       setMenuVisible(false);
