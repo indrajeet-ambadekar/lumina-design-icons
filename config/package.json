@@ -1,0 +1,12 @@
+{
+  "name": "elysium-cloud-ui",
+  "version": "1.0.0",
+  "description": "A lightweight UI library built for React applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

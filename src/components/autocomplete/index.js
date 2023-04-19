@@ -44,8 +44,8 @@ export default ({ ...props }) => {
   return (
     <div
       className={[
-        _styles["_ui-auto-complete-wrapper"],
-        "_ui-auto-complete-wrapper",
+        _styles["elc_ui-auto-complete-wrapper"],
+        "elc_ui-auto-complete-wrapper",
         className || ""
       ].join(" ")}
       id={id || null}
@@ -53,8 +53,8 @@ export default ({ ...props }) => {
     >
       <div
         className={[
-          _styles["_ui-auto-complete-input-cntnr"],
-          "_ui-auto-complete-input-cntnr"
+          _styles["elc_ui-auto-complete-input-cntnr"],
+          "elc_ui-auto-complete-input-cntnr"
         ].join(" ")}
       >
         <label>{label}</label>
@@ -66,8 +66,8 @@ export default ({ ...props }) => {
         {inputValue.length > 0 && (
           <button
             className={[
-              _styles["_ui-autocomplete-clear-btn"],
-              "_ui-autocomplete-clear-btn"
+              _styles["elc_ui-autocomplete-clear-btn"],
+              "elc_ui-autocomplete-clear-btn"
             ].join(" ")}
             onClick={() => {
               setInputValue("");
@@ -80,8 +80,8 @@ export default ({ ...props }) => {
       {suggested.length > 0 && (
         <div
           className={[
-            _styles["_ui-auto-complete-suggested-cntnr"],
-            "_ui-auto-complete-suggested-cntnr"
+            _styles["elc_ui-auto-complete-suggested-cntnr"],
+            "elc_ui-auto-complete-suggested-cntnr"
           ].join(" ")}
         >
           {dataSetType === "flat" &&
@@ -89,8 +89,8 @@ export default ({ ...props }) => {
               <div
                 key={i}
                 className={[
-                  _styles["_ui-auto-complete-suggested-row"],
-                  "_ui-auto-complete-suggested-row"
+                  _styles["elc_ui-auto-complete-suggested-row"],
+                  "elc_ui-auto-complete-suggested-row"
                 ].join(" ")}
                 onClick={() => props?.onChange(_item)}
               >
@@ -102,8 +102,8 @@ export default ({ ...props }) => {
               <div
                 key={i}
                 className={[
-                  _styles["_ui-auto-complete-suggested-row"],
-                  "_ui-auto-complete-suggested-row"
+                  _styles["elc_ui-auto-complete-suggested-row"],
+                  "elc_ui-auto-complete-suggested-row"
                 ].join(" ")}
                 onClick={() => props?.onChange(_item)}
               >

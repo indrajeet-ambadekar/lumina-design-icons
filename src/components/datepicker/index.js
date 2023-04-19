@@ -39,7 +39,7 @@ export default ({ ...props }) => {
   return (
     <div
       className={[
-        styles["_ui-date-input-wrapper"],
+        styles["elc_ui-date-input-wrapper"],
         `${className || ""}`,
         `${props.disabled ? "disabled" : ""}`,
         isFocused ? styles["input-focused"] : ""
@@ -54,7 +54,7 @@ export default ({ ...props }) => {
         value={value || null}
         clearIcon={null}
         calendarIcon={iconLeft || iconRight}
-        className={[styles["_ui-date-field"], "_ui-date-field"].join(" ")}
+        className={[styles["elc_ui-date-field"], "elc_ui-date-field"].join(" ")}
         format='d/MM/yyyy'
         data-testid={testId}
         showLeadingZeros={false}
@@ -62,8 +62,8 @@ export default ({ ...props }) => {
         minDate={props.minDate}
         name={name || null}
         calendarClassName={[
-          styles["_ui-date-field-calendar"],
-          "_ui-date-field-calendar"
+          styles["elc_ui-date-field-calendar"],
+          "elc_ui-date-field-calendar"
         ].join(" ")}
       />
     </div>

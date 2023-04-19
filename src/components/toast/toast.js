@@ -1,0 +1,44 @@
+import React from "react";
+import { useEffect, useRef } from "react";
+import styles from "../../styles/module.scss";
+const useTimeout = (callback, delay) => {
+  const savedCallback = useRef(callback);
+
+  // Remember the latest callback if it changes.=
+  useEffect(() => {
+    savedCallback.current = callback;
+  }, [callback]);
+
+  // Set up the timeout
+  useEffect(() => {
+    // Don't schedule if no delay is specified
+    if (delay === null) return;
+
+    const id = setTimeout(() => savedCallback.current(), delay);
+
+    return () => clearTimeout(id);
+  }, [delay]);
+};
+
+export const Toast = (props) => {
+  useTimeout(props.close, props.timer || 5000);
+
+  return (
+    <div
+      className={[
+        styles["elc_ui-toast"],
+        styles[`elc_ui-toast-${props.type || "default"}`]
+      ].join(" ")}
+    >
+      <div className={styles["elc_ui-toast__text"]}>{props.children}</div>
+      <div>
+        <button
+          onClick={props.close}
+          className={styles["elc_ui-toast__close-btn"]}
+        >
+          <i className='fas fa-times-circle' />
+        </button>
+      </div>
+    </div>
+  );
+};

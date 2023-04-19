@@ -9,14 +9,14 @@ export default ({ ...props }) => {
     <button
       {...subProps}
       className={[
-        `${styles["_ui-button"]}`,
-        "one_ui-button",
+        `${styles["elc_ui-button"]}`,
+        "oneelc_ui-button",
         `${props.className || ""}`
       ].join(" ")}
     >
       {props.children}
       {icon ? (
-        <span className={`${styles["_ui-button-icon"]}`}>{icon}</span>
+        <span className={`${styles["elc_ui-button-icon"]}`}>{icon}</span>
       ) : (
         ""
       )}

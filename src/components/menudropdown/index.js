@@ -9,8 +9,8 @@ const MenuDropdown = ({ ...props }) => {
 
   const listenToClick = (el) => {
     if (
-      (el.target && el.target.closest("._ui-menu-dropdown-wrapper") === null) ||
-      (el.target && el.target.closest("._ui-menu-item") !== null)
+      (el.target && el.target.closest(".elc_ui-menu-dropdown-wrapper") === null) ||
+      (el.target && el.target.closest(".elc_ui-menu-item") !== null)
     ) {
       setMenuVisible(false);
     }
@@ -26,15 +26,15 @@ const MenuDropdown = ({ ...props }) => {
   return (
     <div
       className={[
-        styles["_ui-menu-dropdown-wrapper"],
-        "_ui-menu-dropdown-wrapper",
+        styles["elc_ui-menu-dropdown-wrapper"],
+        "elc_ui-menu-dropdown-wrapper",
         props?.className || ""
       ].join(" ")}
     >
-      <div className={styles["_ui-menu-container"]}>
+      <div className={styles["elc_ui-menu-container"]}>
         <button
           className={[
-            styles["_ui-menu-dropdown-button"],
+            styles["elc_ui-menu-dropdown-button"],
             props?.buttonClassName || ""
           ].join(" ")}
           onClick={() => setMenuVisible(!isMenuVisible)}
@@ -44,9 +44,9 @@ const MenuDropdown = ({ ...props }) => {
         {isMenuVisible && (
           <div
             className={[
-              styles["_ui-menu-dropdown"],
+              styles["elc_ui-menu-dropdown"],
               props?.alignMenu === "right"
-                ? styles["_ui-menu-dropdown-right"]
+                ? styles["elc_ui-menu-dropdown-right"]
                 : "",
               props?.menuClassName || ""
             ].join(" ")}
@@ -63,8 +63,8 @@ const MenuItem = ({ ...props }) => {
   return (
     <div
       className={[
-        styles["_ui-menu-item"],
-        "_ui-menu-item",
+        styles["elc_ui-menu-item"],
+        "elc_ui-menu-item",
         props.className || ""
       ].join(" ")}
       style={props.style || {}}

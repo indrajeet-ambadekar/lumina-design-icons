@@ -48,44 +48,44 @@ $button-seconday: #f9f9f9;
 .text-h1 {
   font-size: 44px;
   line-height: 54px;
-  font-weight: 800;
+  font-weight: 500;
   @include Montserrat;
 }
 .text-h2 {
   font-size: 32px;
   line-height: 40px;
-  font-weight: 800;
+  font-weight: 500;
   @include Montserrat;
 }
 .text-h3 {
   font-size: 24px;
   line-height: 30px;
-  font-weight: 800;
+  font-weight: 500;
   @include Montserrat;
 }
 .text-h4 {
   font-size: 20px;
   line-height: 28px;
-  font-weight: 800;
+  font-weight: 500;
   @include Montserrat;
 }
 .text-h5 {
   font-size: 18px;
   line-height: 24px;
-  font-weight: 800;
+  font-weight: 500;
   @include Montserrat;
 }
 .text-h6 {
   font-size: 16px;
   line-height: 22px;
-  font-weight: 800;
+  font-weight: 500;
   @include Montserrat;
 }
 .text-sh {
   @include Montserrat;
   font-size: 12px;
   line-height: 18px;
-  font-weight: 800;
+  font-weight: 500;
 }
 .text-sb-h1 {
   @include Montserrat;
@@ -103,13 +103,13 @@ $button-seconday: #f9f9f9;
   @include Montserrat;
   font-size: 16px;
   line-height: 22px;
-  font-weight: 800;
+  font-weight: 500;
 }
 .text-h8 {
   @include Montserrat;
   font-size: 14px;
   line-height: 22px;
-  font-weight: 800;
+  font-weight: 500;
 }
 .text-b1 {
   @include Montserrat;
@@ -171,7 +171,7 @@ $button-seconday: #f9f9f9;
 }
 ._acrdn-title-custom {
   font-weight: 700;
-  cursor: poMontserrat;
+  cursor: pointer;
   color: $blue-persian;
   @include Montserrat;
   padding: 1rem;
@@ -182,7 +182,7 @@ $button-seconday: #f9f9f9;
 
 ._acrdn-title {
   font-weight: 700;
-  cursor: poMontserrat;
+  cursor: pointer;
   @include Montserrat;
   padding: 1rem;
   display: flex;
@@ -305,7 +305,7 @@ $button-seconday: #f9f9f9;
   * {
     color: $white;
   }
-  cursor: poMontserrat;
+  cursor: pointer;
   border: none;
   outline: none;
   background: #000;
@@ -357,7 +357,7 @@ $button-seconday: #f9f9f9;
 .toggle-switch-label {
   display: block;
   overflow: hidden;
-  cursor: poMontserrat;
+  cursor: pointer;
   border: 2px solid $gray-isabelline;
   border-radius: 8px;
   margin: 0;
@@ -533,7 +533,7 @@ $one-grid: calc(100% / 12);
 @function calcWidth($col) {
   @return $col * calc(100% / 12);
 }
-._ui-col {
+.elc_ui-col {
   margin: 0px !important;
   padding: 0px !important;
   vertical-align: top;
@@ -642,7 +642,7 @@ $one-grid: calc(100% / 12);
 
 @media only screen and (max-width: 768px) {
   //xs device
-  ._ui-col {
+  .elc_ui-col {
     &[xs="12"] {
       width: calcWidth(12) !important;
       display: inline-flex;
@@ -696,7 +696,7 @@ $one-grid: calc(100% / 12);
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   //sm device
-  ._ui-col {
+  .elc_ui-col {
     &[sm="12"] {
       width: calcWidth(12) !important;
       display: inline-flex;
@@ -750,7 +750,7 @@ $one-grid: calc(100% / 12);
 
 @media only screen and (min-width: 1025px) and (max-width: 2048px) {
   //md device
-  ._ui-col {
+  .elc_ui-col {
     &[md="12"] {
       width: calcWidth(12) !important;
       display: inline-flex;
@@ -804,7 +804,7 @@ $one-grid: calc(100% / 12);
 
 @media only screen and (min-width: 2049px) {
   //lg device
-  ._ui-col {
+  .elc_ui-col {
     &[lg="12"] {
       width: calcWidth(12) !important;
       display: inline-flex;
@@ -858,10 +858,10 @@ $one-grid: calc(100% / 12);
 
 // ######################## BUTTON STYLES ##############################
 
-._ui-button {
+.elc_ui-button {
   border: none;
   outline: none;
-  cursor: poMontserrat;
+  cursor: pointer;
   padding: 0.7rem 1.5rem;
   margin: 10px;
   font-weight: 600;
@@ -968,7 +968,7 @@ $one-grid: calc(100% / 12);
     font-size: 18px;
   }
 }
-._ui-button-icon {
+.elc_ui-button-icon {
   margin: 0 5px;
   * {
     color: inherit;
@@ -978,7 +978,7 @@ $one-grid: calc(100% / 12);
 
 // ######################## CHECKBOX STYLES ##############################
 
-._ui-checkbox {
+.elc_ui-checkbox {
   margin: 0 auto;
   display: inline-flex;
   flex-direction: row;
@@ -986,8 +986,8 @@ $one-grid: calc(100% / 12);
   justify-content: space-between;
   height: 26px;
 }
-._ui-checkbox-disabled {
-  ._ui-checkbox-label {
+.elc_ui-checkbox-disabled {
+  .elc_ui-checkbox-label {
     color: $gray-light;
   }
   cursor: not-allowed;
@@ -999,7 +999,7 @@ $one-grid: calc(100% / 12);
     background-color: transparent;
     border: 2px solid #ccc;
     border-radius: 4px;
-    cursor: poMontserrat;
+    cursor: pointer;
     width: 20px;
     height: 20px;
     position: absolute;
@@ -1039,7 +1039,7 @@ $one-grid: calc(100% / 12);
     }
   }
 }
-._ui-checkbox-label {
+.elc_ui-checkbox-label {
   margin: 0 12px;
   font-weight: 400;
   font-size: 1rem;
@@ -1052,7 +1052,7 @@ $one-grid: calc(100% / 12);
 
 // ######################## HEADER STYLES ##############################
 
-._ui-header-wrapper {
+.elc_ui-header-wrapper {
   width: 100%;
   height: 70px;
   display: flex;
@@ -1061,26 +1061,26 @@ $one-grid: calc(100% / 12);
   box-shadow: 0px 20px 50px rgba(18, 17, 39, 0.08);
   padding: 0px 1rem;
 }
-._ui-header-app-logo {
+.elc_ui-header-app-logo {
   height: 50px;
   @include vertical-center-left;
   width: 20%;
   overflow: hidden;
   box-sizing: border-box;
 }
-._ui-header-app-logo-img {
+.elc_ui-header-app-logo-img {
   height: 30px;
   margin-right: 10px;
   max-width: 100px;
 }
-._ui-header-profile-wrapper {
+.elc_ui-header-profile-wrapper {
   width: 20%;
   height: 50px;
   @include vertical-center-right;
   overflow: hidden;
   box-sizing: border-box;
 }
-._ui-header-nav-cntnr {
+.elc_ui-header-nav-cntnr {
   width: 60%;
   height: 50px;
   @include vertical-center;
@@ -1090,7 +1090,7 @@ $one-grid: calc(100% / 12);
 
 // ######################## LINK STYLES ##############################
 
-a._ui-link {
+a.elc_ui-link {
   color: $red-pigment;
   text-decoration: none;
   border-bottom: 2px solid transparent;
@@ -1106,19 +1106,19 @@ a._ui-link {
   font-weight: 500;
   margin: 0 8px 0 0;
   display: inline;
-  &._ui-link-small {
+  &.elc_ui-link-small {
     font-size: 10px;
   }
-  &._ui-link-medium {
+  &.elc_ui-link-medium {
     font-size: 13px;
   }
-  &._ui-link-large {
+  &.elc_ui-link-large {
     font-size: 16px;
   }
 }
-a._ui-link-disabled {
+a.elc_ui-link-disabled {
   color: $gray-old-silver;
-  // poMontserrat-events: none;
+  // pointer-events: none;
   cursor: not-allowed;
   &:hover,
   &:active,
@@ -1129,7 +1129,7 @@ a._ui-link-disabled {
 
 // ######################## TEXT INPUT STYLES ##############################
 
-._ui-input-wrapper {
+.elc_ui-input-wrapper {
   border: 1px solid $gray-light;
   background-color: #fff;
   border-radius: 5px;
@@ -1150,7 +1150,7 @@ a._ui-link-disabled {
     font-weight: bold;
   }
 }
-._ui-input-icon-left {
+.elc_ui-input-icon-left {
   min-width: 50px;
   max-width: 80px;
   display: inline-flex;
@@ -1164,7 +1164,7 @@ a._ui-link-disabled {
     max-width: 20px;
   }
 }
-._ui-input-icon-right {
+.elc_ui-input-icon-right {
   min-width: 50px;
   max-width: 80px;
   display: inline-flex;
@@ -1175,7 +1175,7 @@ a._ui-link-disabled {
     font-size: 18px;
   }
 }
-._ui-input-field {
+.elc_ui-input-field {
   height: 45px;
   border: none;
   outline: none;
@@ -1197,7 +1197,7 @@ a._ui-link-disabled {
     color: $blue-persian !important;
   }
 }
-._ui-static-icon-left {
+.elc_ui-static-icon-left {
   width: 100%;
   height: 70%;
   @include vertical-center;
@@ -1208,7 +1208,7 @@ a._ui-link-disabled {
 
 // ######################## DATE INPUT STYLES ##############################
 
-._ui-date-input-wrapper {
+.elc_ui-date-input-wrapper {
   position: relative;
   label {
     font-size: 13px;
@@ -1219,7 +1219,7 @@ a._ui-link-disabled {
     font-weight: bold;
   }
 }
-._ui-date-field {
+.elc_ui-date-field {
   width: 100%;
   border: none;
   & > div {
@@ -1256,7 +1256,7 @@ a._ui-link-disabled {
 
 // ######################## TOAST STYLES ##############################
 
-._ui-toast {
+.elc_ui-toast {
   * {
     font-size: inherit;
     color: inherit;
@@ -1265,7 +1265,7 @@ a._ui-link-disabled {
 
 // ######################## TOGGLE INPUT STYLES ##############################
 
-._ui-toggle-input {
+.elc_ui-toggle-input {
   --inactive-bg: #cfd8dc;
   --active-bg: #ed1c24;
   --size: 1.5rem;
@@ -1274,7 +1274,7 @@ a._ui-link-disabled {
   height: calc(var(--size));
   display: inline-block;
   border-radius: 30px;
-  cursor: poMontserrat;
+  cursor: pointer;
   background-color: $gray-old-silver;
   background-image: radial-gradient(
       circle calc(var(--size) / 3),
@@ -1296,7 +1296,7 @@ a._ui-link-disabled {
 
 // ######################## SELECT DROPDOWN STYLES ##############################
 
-._ui-dropdown {
+.elc_ui-dropdown {
   margin-top: 30px;
   width: 300px;
   border-radius: 6px;
@@ -1304,7 +1304,7 @@ a._ui-link-disabled {
   background-color: white;
   position: relative;
 }
-._ui-select-label {
+.elc_ui-select-label {
   position: absolute;
   left: -2px;
   top: -18px;
@@ -1317,13 +1317,13 @@ a._ui-link-disabled {
   transition: opacity 0.2s ease-in-out;
   opacity: 0;
 }
-._ui-select-label-visible {
+.elc_ui-select-label-visible {
   opacity: 1;
   background-color: transparent;
 }
-._ui-dropdown-header {
+.elc_ui-dropdown-header {
   padding: 15px;
-  cursor: poMontserrat;
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1331,7 +1331,7 @@ a._ui-link-disabled {
   @include Montserrat;
 }
 
-._ui-dropdown-body {
+.elc_ui-dropdown-body {
   padding: 0px;
   @include Montserrat;
   font-weight: 500;
@@ -1346,14 +1346,14 @@ a._ui-link-disabled {
   z-index: 50;
 }
 
-._ui-dropdown-body-open {
+.elc_ui-dropdown-body-open {
   display: block;
   max-height: 200px;
   overflow-x: hidden;
   overflow-y: auto;
 }
 
-._ui-dropdown-item {
+.elc_ui-dropdown-item {
   padding: 0 10px;
   display: flex;
   flex-direction: row;
@@ -1363,20 +1363,20 @@ a._ui-link-disabled {
   justify-content: flex-start;
   min-height: 45px;
 }
-._ui-dropdown-item-selected {
+.elc_ui-dropdown-item-selected {
   color: $white;
   background-color: $blue-persian;
   font-weight: 700;
 }
 
-._ui-dropdown-item:hover {
-  cursor: poMontserrat;
+.elc_ui-dropdown-item:hover {
+  cursor: pointer;
   color: $white;
   background-color: $blue-persian;
   font-weight: 700;
 }
 
-._ui-dropdown-item-dot {
+.elc_ui-dropdown-item-dot {
   opacity: 0;
   color: #91a5be;
   transition: all 0.2s ease-in-out;
@@ -1384,34 +1384,34 @@ a._ui-link-disabled {
   font-size: 20px;
 }
 
-._ui-dropdown-item-dot-selected {
+.elc_ui-dropdown-item-dot-selected {
   opacity: 1;
 }
 
-._ui-dropdown-icon {
+.elc_ui-dropdown-icon {
   font-size: 13px;
   color: #91a5be;
   transform: rotate(0deg);
   transition: all 0.2s ease-in-out;
 }
 
-._ui-dropdown-icon-open {
+.elc_ui-dropdown-icon-open {
   transform: rotate(180deg);
 }
-._ui-dropdown-focused {
+.elc_ui-dropdown-focused {
   border: 1px solid $blue-persian;
 }
 
 // ######################## RADIO INPUT STYLES ##############################
 
-._ui-radio-button {
+.elc_ui-radio-button {
   margin: 15px 0px;
   input[type="radio"] {
     display: none;
   }
 
   label {
-    cursor: poMontserrat;
+    cursor: pointer;
     position: relative;
     font-size: inherit;
     padding-left: 1.2rem;
@@ -1454,14 +1454,14 @@ a._ui-link-disabled {
     transform: translateY(-50%) scale(0.55);
   }
 }
-._ui-radio-label {
+.elc_ui-radio-label {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   color: $black-raisin;
 }
-._ui-radio-button-disabled {
+.elc_ui-radio-button-disabled {
   label::after {
     content: "";
     position: absolute;
@@ -1474,9 +1474,9 @@ a._ui-link-disabled {
     left: -5px;
     transform: translateY(-50%) scale(0);
     transition: transform 400ms ease;
-    pomontserrat-events: none;
+    pointer-events: none;
   }
-  ._ui-radio-label {
+  .elc_ui-radio-label {
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -1488,7 +1488,7 @@ a._ui-link-disabled {
 
 // ######################## BREADCRUMB STYLES ##############################
 
-._ui-breadcrumb {
+.elc_ui-breadcrumb {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -1497,12 +1497,12 @@ a._ui-link-disabled {
   align-items: center;
   justify-content: flex-start;
 }
-._ui-breadcrumb-crumb {
+.elc_ui-breadcrumb-crumb {
   margin: 0 10px 0 0px;
   @include vertical-center-left;
 }
-._ui-breadcrumb-label {
-  cursor: poMontserrat;
+.elc_ui-breadcrumb-label {
+  cursor: pointer;
   @include vertical-center-left;
 
   span {
@@ -1520,7 +1520,7 @@ a._ui-link-disabled {
     overflow: hidden;
   }
 }
-._ui-breadcrumb-chevron {
+.elc_ui-breadcrumb-chevron {
   i {
     color: $gray-light;
     font-size: 12px;
@@ -1530,7 +1530,7 @@ a._ui-link-disabled {
 
 // ######################## CHIP STYLES ##############################
 
-._ui-chip {
+.elc_ui-chip {
   display: inline-flex;
   border: 1px solid $gray-isabelline;
   border-radius: 22px;
@@ -1540,11 +1540,11 @@ a._ui-link-disabled {
   max-width: fit-content;
   margin: 5px;
 }
-._ui-chip-icon {
+.elc_ui-chip-icon {
   margin: 0 2px;
   font-size: 12px;
 }
-._ui-chip-label {
+.elc_ui-chip-label {
   margin: 0 5px;
   color: $gray-davy;
   font-size: 14px;
@@ -1552,18 +1552,18 @@ a._ui-link-disabled {
   font-weight: 400;
   letter-spacing: 0.26px;
 }
-._ui-chip-close-btn {
+.elc_ui-chip-close-btn {
   margin: 0 0 0 5px;
-  cursor: poMontserrat;
+  cursor: pointer;
   color: $gray-davy;
   font-size: 18px;
   line-height: 20px;
   font-weight: 400;
 }
-._ui-chip-white {
+.elc_ui-chip-white {
   background-color: $white;
 }
-._ui-chip-red {
+.elc_ui-chip-red {
   background-color: $red-pigment;
   * {
     color: $white;
@@ -1572,14 +1572,14 @@ a._ui-link-disabled {
 
 // ######################## DIVIDER STYLES ##############################
 
-._ui-divider-horizontal {
+.elc_ui-divider-horizontal {
   border-bottom: 1px solid $gray-light;
   height: 2px !important;
   margin: 10px 0;
   width: 100%;
   display: block;
 }
-._ui-divider-vertical {
+.elc_ui-divider-vertical {
   border-right: 1px solid $gray-light;
   min-height: 40px;
   width: 2px !important;
@@ -1588,7 +1588,7 @@ a._ui-link-disabled {
 
 // ######################## FLOATING BUTTON STYLES ##############################
 
-._ui-flbtn {
+.elc_ui-flbtn {
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.08);
   border-radius: 28px;
   padding: 13px 16px 13px 16px;
@@ -1597,16 +1597,16 @@ a._ui-link-disabled {
   @include vertical-center;
   flex-direction: row;
   margin: 15px;
-  cursor: poMontserrat;
+  cursor: pointer;
 }
-._ui-flbtn-label {
+.elc_ui-flbtn-label {
   margin: 0 10px;
   font-size: 14px;
 }
-._ui-flbtn-icon {
+.elc_ui-flbtn-icon {
   font-size: 14px;
 }
-._ui-flbtn-red {
+.elc_ui-flbtn-orange {
   background-color: $red-pigment;
   * {
     color: $white;
@@ -1617,7 +1617,7 @@ a._ui-link-disabled {
     line-height: 18px;
   }
 }
-._ui-flbtn-white {
+.elc_ui-flbtn-white {
   background-color: $white;
   border: 1px solid $gray-isabelline;
   * {
@@ -1629,13 +1629,13 @@ a._ui-link-disabled {
     line-height: 18px;
   }
 }
-._ui-flbtn-small {
+.elc_ui-flbtn-S {
   padding: 5px 9px;
   * {
     font-size: 11px;
   }
 }
-._ui-flbtn-medium {
+.elc_ui-flbtn-M {
   padding: 12px 16px;
   * {
     font-size: 14px;
@@ -1644,7 +1644,7 @@ a._ui-link-disabled {
 
 // ######################## PROGRESS BAR STYLES ##############################
 
-._ui-progress-radial {
+.elc_ui-progress-radial {
   display: block;
   margin: 15px auto;
   position: relative;
@@ -1688,14 +1688,14 @@ a._ui-link-disabled {
   fill: $green;
 }
 
-._ui-progress-linear {
+.elc_ui-progress-linear {
   background-color: $gray-light;
   padding: 3px;
   position: relative;
   margin-top: 80px;
   border-radius: 22px;
 }
-._ui-prgs-lnr-label {
+.elc_ui-prgs-lnr-label {
   color: $gray-davy;
   font-family: "Montserrat";
   font-style: normal;
@@ -1706,7 +1706,7 @@ a._ui-link-disabled {
   top: -20px;
   left: 0;
 }
-._ui-prgs-lnr-value {
+.elc_ui-prgs-lnr-value {
   color: $gray-davy;
   font-family: "Montserrat";
   font-style: normal;
@@ -1717,16 +1717,16 @@ a._ui-link-disabled {
   top: -20px;
   right: 0;
 }
-._ui-prgs-lnr-fill {
+.elc_ui-prgs-lnr-fill {
   border-radius: 22px;
   background-color: $red-pigment;
   transition: width 0.8s ease-in 0s;
 }
-._ui-prgs-lnr-fill-complete {
+.elc_ui-prgs-lnr-fill-complete {
   background-color: $green;
 }
 
-._ui-progress-status {
+.elc_ui-progress-status {
   position: absolute;
   top: 0;
   left: 0;
@@ -1737,13 +1737,13 @@ a._ui-link-disabled {
   border-radius: 50%;
   @include vertical-center;
 }
-._ui-progress-status-red {
+.elc_ui-progress-status-red {
   i {
     color: $red-pigment;
     font-size: 20px;
   }
 }
-._ui-progress-status-green {
+.elc_ui-progress-status-green {
   i {
     color: $green;
     font-size: 20px;
@@ -1752,11 +1752,11 @@ a._ui-link-disabled {
 
 // ######################## RANGE SLIDER STYLES ##############################
 
-._ui-slider-wrapper {
+.elc_ui-slider-wrapper {
   display: block;
   padding: 1rem 1.3rem;
 }
-._ui-range-slider {
+.elc_ui-range-slider {
   display: block;
   width: 100%;
   -webkit-appearance: none;
@@ -1774,7 +1774,7 @@ a._ui-link-disabled {
   transition: all 0.3s ease-in 0s;
 }
 
-._ui-range-slider::-webkit-slider-thumb {
+.elc_ui-range-slider::-webkit-slider-thumb {
   -webkit-appearance: none !important;
   background-color: $red-pigment;
   border: 1px solid $red-carnelian;
@@ -1782,17 +1782,17 @@ a._ui-link-disabled {
   width: 24px;
   border-radius: 50%;
   transition: all 0.3s ease-in 0s;
-  cursor: poMontserrat;
+  cursor: pointer;
   &:hover {
     border-width: 4px;
   }
 }
-._ui-slider-label-row {
+.elc_ui-slider-label-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-._ui-slider-label {
+.elc_ui-slider-label {
   color: $gray-davy;
   font-size: 14px;
   line-height: 20px;
@@ -1811,13 +1811,13 @@ a._ui-link-disabled {
 
 // ######################## TABS STYLES ##############################
 
-._ui-tab-wrapper {
+.elc_ui-tab-wrapper {
   padding: 5px;
 }
-._ui-tab-cntnr {
+.elc_ui-tab-cntnr {
   box-sizing: border-box;
 }
-._ui-tab-header {
+.elc_ui-tab-header {
   border-bottom: 1px solid $gray-isabelline;
   display: flex;
   flex-direction: row;
@@ -1832,10 +1832,10 @@ a._ui-link-disabled {
     overflow: hidden;
   }
 }
-._ui-tab-header-contained {
+.elc_ui-tab-header-contained {
   border-bottom: none;
 }
-._ui-tab-chip {
+.elc_ui-tab-chip {
   @include Montserrat;
   font-style: normal;
   font-weight: 400;
@@ -1844,9 +1844,9 @@ a._ui-link-disabled {
   letter-spacing: 0.26px;
   color: $gray-old-silver;
   border-bottom: 3px solid transparent;
-  cursor: poMontserrat;
+  cursor: pointer;
 }
-._ui-tab-chip-contained {
+.elc_ui-tab-chip-contained {
   @include Montserrat;
   font-style: normal;
   font-weight: 400;
@@ -1855,12 +1855,12 @@ a._ui-link-disabled {
   letter-spacing: 0.26px;
   color: $gray-old-silver;
   border: 1px solid transparent;
-  cursor: poMontserrat;
+  cursor: pointer;
   border-radius: 4px;
   margin-right: 10px;
   background-color: $gray-isabelline;
 }
-._ui-active-tab-chip {
+.elc_ui-active-tab-chip {
   border-bottom: 3px solid $red-pigment;
   * {
     color: $red-pigment;
@@ -1871,7 +1871,7 @@ a._ui-link-disabled {
   flex-grow: 0;
   font-weight: 700;
 }
-._ui-active-contained-tab-chip {
+.elc_ui-active-contained-tab-chip {
   border: 1px solid $red-pigment;
   * {
     color: $red-pigment;
@@ -1883,7 +1883,7 @@ a._ui-link-disabled {
   font-weight: 700;
   background-color: #fff;
 }
-._ui-tab {
+.elc_ui-tab {
   @include Montserrat;
   font-style: normal;
   font-weight: 400;
@@ -1896,7 +1896,7 @@ a._ui-link-disabled {
 
 // ######################## TAG STYLES ##############################
 
-._ui-tag {
+.elc_ui-tag {
   display: inline-flex;
   width: fit-content;
   padding: 5px 15px;
@@ -1914,61 +1914,61 @@ a._ui-link-disabled {
   margin: 5px;
   text-transform: capitalize;
 }
-._ui-tag-default {
+.elc_ui-tag-default {
   background-color: #e5f0ff;
   color: $blue-persian;
 }
-._ui-tag-default-dark {
+.elc_ui-tag-default-dark {
   color: #fff;
   background-color: $blue-persian;
 }
-._ui-tag-success {
+.elc_ui-tag-success {
   background-color: #e3fff1;
   color: #05a660;
 }
-._ui-tag-success-dark {
+.elc_ui-tag-success-dark {
   color: #fff;
   background-color: #05a660;
 }
-._ui-tag-inprogress {
+.elc_ui-tag-inprogress {
   background-color: $blue-alice;
   color: $blue-bolt;
 }
-._ui-tag-inprogress-dark {
+.elc_ui-tag-inprogress-dark {
   color: #fff;
   background-color: $blue-bolt;
 }
-._ui-tag-error {
+.elc_ui-tag-error {
   background-color: #ffe5e5;
   color: $red-pigment;
 }
-._ui-tag-error-dark {
+.elc_ui-tag-error-dark {
   color: #fff;
   background-color: $red-pigment;
 }
-._ui-tag-warn,
-._ui-tag-pending {
+.elc_ui-tag-warn,
+.elc_ui-tag-pending {
   background-color: #fff8e5;
   color: #e57a00;
 }
-._ui-tag-warn-dark,
-._ui-tag-pending-dark {
+.elc_ui-tag-warn-dark,
+.elc_ui-tag-pending-dark {
   color: #fff;
   background-color: #e57a00;
 }
-._ui-tag-info {
+.elc_ui-tag-info {
   background-color: $gray-isabelline;
   color: $black-raisin;
 }
-._ui-tag-info-dark {
+.elc_ui-tag-info-dark {
   color: #fff;
   background-color: $gray-old-silver;
 }
-._ui-tag-unavailable {
+.elc_ui-tag-unavailable {
   background-color: $gray-isabelline;
   color: $gray-old-silver;
 }
-._ui-tag-unavailable-dark {
+.elc_ui-tag-unavailable-dark {
   background-color: $gray-old-silver;
   color: $gray-light;
 }
@@ -2064,7 +2064,7 @@ a._ui-link-disabled {
     button {
       outline: none;
       border: none;
-      cursor: poMontserrat;
+      cursor: pointer;
       font-style: normal;
       font-weight: 400;
       font-size: 12px;
@@ -2088,7 +2088,7 @@ a._ui-link-disabled {
 
 // ######################## BOTTOM NAVIGATION STYLES ##############################
 
-._ui-bottom-navigation {
+.elc_ui-bottom-navigation {
   position: fixed;
   bottom: 10px;
   left: 25%;
@@ -2103,8 +2103,8 @@ a._ui-link-disabled {
   align-items: center;
   justify-content: space-evenly;
 }
-._ui-nav-item {
-  cursor: poMontserrat;
+.elc_ui-nav-item {
+  cursor: pointer;
   height: 60px;
   @include vertical-center();
   flex-direction: column;
@@ -2119,7 +2119,7 @@ a._ui-link-disabled {
   flex-grow: 1;
   border-bottom: 3px solid transparent;
 }
-._ui-nav-item-active {
+.elc_ui-nav-item-active {
   border-bottom-color: $red-pigment;
   font-weight: 800;
   i,
@@ -2127,7 +2127,7 @@ a._ui-link-disabled {
     color: $red-pigment;
   }
 }
-._ui-nav-item-icon {
+.elc_ui-nav-item-icon {
   @include Montserrat();
   font-style: normal;
   font-weight: 400;
@@ -2141,8 +2141,8 @@ a._ui-link-disabled {
     color: $gray-old-silver;
   }
 }
-._ui-nav-center-item {
-  cursor: poMontserrat;
+.elc_ui-nav-center-item {
+  cursor: pointer;
   position: absolute;
   width: 50px;
   height: 50px;
@@ -2163,13 +2163,13 @@ a._ui-link-disabled {
 }
 
 // ######################## ICON STYLES ##############################
-._ui-icon-wrapper {
+.elc_ui-icon-wrapper {
   margin: 5px;
   @include vertical-center();
 }
 
 // ######################## TOAST STYLES ##############################
-._ui-toasts-wrapper {
+.elc_ui-toasts-wrapper {
   position: fixed;
   top: 20px;
   right: 20px;
@@ -2177,7 +2177,7 @@ a._ui-link-disabled {
   flex-direction: column;
 }
 
-._ui-toast {
+.elc_ui-toast {
   border: 2px solid transparent;
   background-color: #fafafa;
   border-radius: 4px;
@@ -2188,37 +2188,37 @@ a._ui-link-disabled {
   display: flex;
 
   position: relative;
-  cursor: poMontserrat;
+  cursor: pointer;
   transition: all 1s ease-in 0s;
   max-width: 30vw;
   @include vertical-center-left();
   justify-content: space-between;
   flex-grow: 1;
 }
-._ui-toast-default {
+.elc_ui-toast-default {
   background-color: #fafafa;
   border: 2px solid transparent;
 }
-._ui-toast-success {
+.elc_ui-toast-success {
   background-color: #0c9000;
   border: 2px solid transparent;
   * {
     color: #fff;
   }
 }
-._ui-toast-error {
+.elc_ui-toast-error {
   background-color: #ed1c24;
   border: 2px solid transparent;
   * {
     color: #fff;
   }
 }
-._ui-toast-info {
+.elc_ui-toast-info {
   background-color: #73cff1;
   border: 2px solid transparent;
 }
 
-._ui-toast-warn {
+.elc_ui-toast-warn {
   background-color: #f1c411;
   border: 2px solid transparent;
   * {
@@ -2226,35 +2226,35 @@ a._ui-link-disabled {
   }
 }
 
-._ui-toast__text {
+.elc_ui-toast__text {
   padding: 0.7rem 2rem;
   line-height: 1.4;
   font-weight: 500;
   @include Montserrat;
 }
 
-._ui-toast__close-btn {
+.elc_ui-toast__close-btn {
   border: none;
   background-color: transparent;
   font-size: 16px;
   margin-right: 8px;
-  cursor: poMontserrat;
+  cursor: pointer;
 }
 
 // ######################## MENU DROPDOWN STYLES ##############################
 
-._ui-menu-dropdown-wrapper {
+.elc_ui-menu-dropdown-wrapper {
   position: relative;
   width: fit-content;
   @include vertical-center();
   flex-direction: row;
   background-color: $white;
 }
-._ui-menu-container {
+.elc_ui-menu-container {
   overflow: hidden;
 }
-._ui-menu-dropdown-button {
-  cursor: poMontserrat;
+.elc_ui-menu-dropdown-button {
+  cursor: pointer;
   border: none;
   outline: none;
   padding: 1rem;
@@ -2271,7 +2271,7 @@ a._ui-link-disabled {
     0px 4px 8px rgba(96, 97, 112, 0.1);
   height: 3rem;
 }
-._ui-menu-dropdown {
+.elc_ui-menu-dropdown {
   position: absolute;
   max-height: 15rem;
   overflow-x: hidden;
@@ -2285,17 +2285,17 @@ a._ui-link-disabled {
   background-color: $white;
   border: 1px solid $gray-isabelline;
 }
-._ui-menu-dropdown-right {
+.elc_ui-menu-dropdown-right {
   left: auto;
   right: 0;
   top: 2.8rem;
   border: 1px solid $gray-isabelline;
 }
 
-._ui-menu-item {
+.elc_ui-menu-item {
   padding: 10px 1rem;
   text-align: center;
-  cursor: poMontserrat;
+  cursor: pointer;
   max-width: 8rem;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -2305,24 +2305,24 @@ a._ui-link-disabled {
   }
 }
 // ######################## TAB SELECT STYLES ##############################
-._ui-tab-select-wrapper {
+.elc_ui-tab-select-wrapper {
   padding: 1rem 0;
   @include vertical-center-left();
   flex-direction: column;
 }
-._ui-tab-select-label {
+.elc_ui-tab-select-label {
   @include Montserrat;
   font-weight: 600;
   font-size: 1rem;
   line-height: 35px;
 }
-._ui-tab-select-option-container {
+.elc_ui-tab-select-option-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: fit-content;
 }
-._ui-tab-select-option {
+.elc_ui-tab-select-option {
   border: none; //1px solid $black-raisin;
   @include card-shadow();
   border-radius: 4px;
@@ -2331,12 +2331,12 @@ a._ui-link-disabled {
   @include vertical-center();
   font-size: 14px;
   @include Montserrat();
-  cursor: poMontserrat;
+  cursor: pointer;
   background-color: transparent; //$gray-isabelline;
   font-weight: 700;
   color: $black-raisin;
 }
-._ui-tab-select-option-selected {
+.elc_ui-tab-select-option-selected {
   background-color: $red-pigment;
   color: $white;
   svg {
@@ -2348,18 +2348,18 @@ a._ui-link-disabled {
 
 // ######################## RESPONSIVE STYLES ##############################
 @media screen and (max-width: 1024px) {
-  ._ui-header-wrapper {
+  .elc_ui-header-wrapper {
     padding: 5px 10px;
     height: 40px;
     position: relative;
     box-shadow: 0px 0px 2px rgba(40, 41, 61, 0.04),
       0px 4px 8px rgba(96, 97, 112, 0.1);
   }
-  ._ui-header-nav-cntnr {
+  .elc_ui-header-nav-cntnr {
     height: 40px;
     display: none;
   }
-  ._ui-header-app-logo {
+  .elc_ui-header-app-logo {
     @include vertical-center-left;
     img {
       // height: auto;
@@ -2370,17 +2370,17 @@ a._ui-link-disabled {
     width: 80%;
     max-width: 80%;
   }
-  ._ui-header-profile-wrapper {
+  .elc_ui-header-profile-wrapper {
     height: 40px;
     width: 20%;
     max-width: 20%;
   }
-  ._ui-header-app-logo-img {
+  .elc_ui-header-app-logo-img {
     height: 20px;
   }
 
-  ._ui-header-hamburger-btn {
-    cursor: poMontserrat;
+  .elc_ui-header-hamburger-btn {
+    cursor: pointer;
     border: none;
     outline: none;
     font-size: 16px;
@@ -2397,7 +2397,7 @@ a._ui-link-disabled {
       transition: all 1s ease-in 0s;
     }
   }
-  ._ui-header-hamburger-menu {
+  .elc_ui-header-hamburger-menu {
     position: absolute;
     top: 45px;
     width: 100%;
@@ -2418,7 +2418,7 @@ a._ui-link-disabled {
     overflow-x: hidden;
     overflow-y: auto;
   }
-  ._ui-bottom-navigation {
+  .elc_ui-bottom-navigation {
     width: 100vw;
     left: 0;
     right: 0;
@@ -2428,32 +2428,32 @@ a._ui-link-disabled {
       transform: scale(0.85);
     }
   }
-  ._ui-nav-center-item {
+  .elc_ui-nav-center-item {
     width: 40px;
     height: 40px;
     top: -20px;
   }
-  ._ui-nav-item {
+  .elc_ui-nav-item {
     height: 45px;
   }
-  ._ui-nav-item-icon {
+  .elc_ui-nav-item-icon {
     margin: 2px;
   }
 }
 @media screen and (min-width: 1025px) {
-  ._ui-header-hamburger-btn {
+  .elc_ui-header-hamburger-btn {
     display: none;
   }
 }
 
 // ######################## AUTOCOMPLETE COMPONENT STYLES ##############################
-._ui-auto-complete-wrapper {
+.elc_ui-auto-complete-wrapper {
   width: fit-content;
   height: fit-content;
   position: relative;
   min-width: 50%;
 }
-._ui-auto-complete-input-cntnr {
+.elc_ui-auto-complete-input-cntnr {
   height: 50px;
   border: 1px solid $gray-light;
   border-radius: 4px;
@@ -2485,7 +2485,7 @@ a._ui-link-disabled {
   }
 }
 
-._ui-auto-complete-suggested-cntnr {
+.elc_ui-auto-complete-suggested-cntnr {
   position: absolute;
   top: 55px;
   left: 0;
@@ -2498,21 +2498,21 @@ a._ui-link-disabled {
   padding: 5px;
   border-radius: 4px;
 }
-._ui-auto-complete-suggested-row {
+.elc_ui-auto-complete-suggested-row {
   height: 40px;
   @include vertical-center-left();
   font-size: 1rem;
   color: $gray-davy;
   padding: 1rem 5px;
-  cursor: poMontserrat;
+  cursor: pointer;
   font-weight: 600;
   &:hover {
     color: $blue-persian;
     font-weight: 600;
   }
 }
-._ui-autocomplete-clear-btn {
-  cursor: poMontserrat;
+.elc_ui-autocomplete-clear-btn {
+  cursor: pointer;
   border: 2px solid $gray-light;
   width: 25px;
   height: 25px;

@@ -6,29 +6,34 @@ export default ({ ...props }) => {
   return (
     <div
       className={[
-        "_ui-chip",
-        styles["_ui-chip"],
-        styles[`_ui-chip-${color}`],
+        "elc_ui-chip",
+        styles["elc_ui-chip"],
+        styles[`elc_ui-chip-${color}`],
         className || ""
       ].join(" ")}
       id={id || null}
       style={style || {}}
     >
       {icon ? (
-        <span className={[styles["_ui-chip-icon"], "_ui-chip-icon"].join(" ")}>
+        <span
+          className={[styles["elc_ui-chip-icon"], "elc_ui-chip-icon"].join(" ")}
+        >
           {icon}
         </span>
       ) : (
         ""
       )}
-      <span className={[styles["_ui-chip-label"], "_ui-chip-label"].join(" ")}>
+      <span
+        className={[styles["elc_ui-chip-label"], "elc_ui-chip-label"].join(" ")}
+      >
         {children}
       </span>
       {dismissable ? (
         <span
-          className={[styles["_ui-chip-close-btn"], "_ui-chip-close-btn"].join(
-            " "
-          )}
+          className={[
+            styles["elc_ui-chip-close-btn"],
+            "elc_ui-chip-close-btn"
+          ].join(" ")}
           onClick={onClose}
         >
           &times;

@@ -4,8 +4,8 @@ export const BottomNavigation = ({ ...props }) => {
   return (
     <div
       className={[
-        styles["_ui-bottom-navigation"],
-        "_ui-bottom-navigation",
+        styles["elc_ui-bottom-navigation"],
+        "elc_ui-bottom-navigation",
         props.className || ""
       ].join(" ")}
       style={props.style || {}}
@@ -21,9 +21,9 @@ export const BottomNavItem = ({ ...props }) => {
     <div
       className={[
         props.type === "center"
-          ? styles["_ui-nav-center-item"]
-          : styles["_ui-nav-item"],
-        props.active ? styles["_ui-nav-item-active"] : "",
+          ? styles["elc_ui-nav-center-item"]
+          : styles["elc_ui-nav-item"],
+        props.active ? styles["elc_ui-nav-item-active"] : "",
 
         props.className || ""
       ].join(" ")}
@@ -32,7 +32,7 @@ export const BottomNavItem = ({ ...props }) => {
       onClick={props.onClick}
     >
       {props.icon && (
-        <div className={styles["_ui-nav-item-icon"]}>{props.icon}</div>
+        <div className={styles["elc_ui-nav-item-icon"]}>{props.icon}</div>
       )}
       {props.type !== "center" && <span>{props.children}</span>}
     </div>

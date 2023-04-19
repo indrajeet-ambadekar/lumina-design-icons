@@ -17,25 +17,62 @@ import {
   DatePicker,
   Dialog,
   FloatingButton,
+  InputField,
   Link,
   MenuDropdown,
   MenuItem,
-  //
-  Text
+  Progress,
+  RadioButton,
+  RangeSlider,
+  SelectDropDown,
+  Tabs,
+  TabCard,
+  TabSelect,
+  Tag,
+  Text,
+  useToast,
+  ToggleInput,
+  ToggleSwitch,
+  Tooltip
 } from "elysium-cloud-ui";
 import "elysium-cloud-ui/dist/index.css";
 
 const App = () => {
-  const [fruitName, setFruitName] = useState("apple");
+  const toast = useToast();
+
+  const [showDialog, toggleDialog] = useState(false);
+  const [switchFlag, toggleSwitchFlag] = useState(false);
+  const [toggleFlag, toggleInputFlag] = useState(false);
   const [checkboxFlag1, toggleCheckbox1] = useState(false);
   const [checkboxFlag2, toggleCheckbox2] = useState(false);
   const [checkboxFlag3, toggleCheckbox3] = useState(false);
+  const [textValue, setTextValue] = useState("");
+  const [numValue, setNumValue] = useState(1000);
+  const [mobValue, setMobValue] = useState("");
   const [dateValue, setDateValue] = useState(new Date());
-  const [showDialog, toggleDialog] = useState(false);
+  const [city, setCity] = useState("");
+  const [radioFlag, setRadioFlag] = useState("Apple");
+  const [sliderVal, setSliderVal] = useState(30);
+  const [smoker, setSmoker] = useState(true);
+  const [occupation, setOccupation] = useState("salaried");
+  const [fruitName, setFruitName] = useState("");
   return (
     <div className='showcase-container'>
       <UiProvidor>
         <section className='showcase-item'>
+          <Text type='h2'>Accordion Component</Text>
+          <pre>{`
+<Accordion
+  title={<div className='accordion-heading'>Accordion Component</div>}
+  openIcon={<i className='fas fa-chevron-down' />}
+  collapseIcon={<i className='fas fa-chevron-up' />}
+  className='demo-card-accordion'
+  defaultOpen={false}
+  id='accordion1'
+>
+  <section className='content-wrapper'>Accordion Text Area</section>
+</Accordion>
+          `}</pre>
           <Accordion
             title={<div className='accordion-heading'>Accordion Component</div>}
             openIcon={<i className='fas fa-chevron-down' />}
@@ -48,9 +85,30 @@ const App = () => {
           </Accordion>
         </section>
         <section className='showcase-item'>
+          <Text type='h2'>Appbar Component</Text>
           <AppBar></AppBar>
         </section>
         <section className='showcase-item'>
+          <Text type='h2'>AppHeader Component</Text>
+          <pre>
+            {`
+<AppHeader
+  className='app-header'
+  companyIcon={true}
+  secondaryIcon={null}
+  onIconClick={() => {
+    alert("Header Icon Clicked");
+  }}
+  profileIcon={
+    <Avatar size='M'>
+      <i className='fas fa-user-circle'></i>
+    </Avatar>
+  }
+>
+  <h1>APP HEADER</h1>
+</AppHeader>
+            `}
+          </pre>
           <AppHeader
             className='app-header'
             companyIcon={true}
@@ -68,6 +126,32 @@ const App = () => {
           </AppHeader>
         </section>
         <section className='showcase-item'>
+          <Text type='h2'>AutoComplete Component</Text>
+          <pre>
+            {`
+<AutoComplete
+  dataSet={[
+    { id: 1, name: "apple" },
+    { id: 2, name: "orange" },
+    { id: 3, name: "banana" },
+    { id: 4, name: "pine apple" },
+    { id: 5, name: "custard apple" },
+    { id: 6, name: "watermelon" }
+  ]}
+  onChange={(value) => setFruitName(value.name)}
+  value={fruitName}
+  placeholder='Start typing here...'
+  label='Enter fruit name'
+  id='AutoComplete'
+  className='AutoComplete'
+  renderItem={(_item) => (
+    <div className='autocomplete-row'>{_item.name}</div>
+  )}
+  dataSetType='nested' // flat / nested
+  dataTargetKey='name'
+/>
+            `}
+          </pre>
           <AutoComplete
             dataSet={[
               { id: 1, name: "apple" },
@@ -91,6 +175,11 @@ const App = () => {
           />
         </section>
         <section className='showcase-item'>
+          <Text type='h2'>Avatar Component</Text>
+          <pre>{`
+<Avatar size='S'>JD</Avatar>
+size--> S,M,L,XL,XXL,3XL
+          `}</pre>
           <div className='flex-row'>
             <Avatar size='S' className='test'>
               <i className='fas fa-user-circle' />
@@ -104,29 +193,68 @@ const App = () => {
           </div>
         </section>
         <section className='showcase-item'>
+          <Text type='h2'>BottomNavigation Component</Text>
+          <pre>
+            {`
+<BottomNavigation className='bottom-nav-demo'>
+  <BottomNavItem
+    active={true}
+    icon={<i className='fas fa-user' />}
+    onClick={() => alert("TESTING")}
+  >
+    Page 1
+  </BottomNavItem>
+  <BottomNavItem icon={<i className='fas fa-shield-virus' />}>
+    Page 2
+  </BottomNavItem>
+  <BottomNavItem type='center' icon={<i className='fas fa-plus' />}>
+    Page 3
+  </BottomNavItem>
+  <BottomNavItem icon={<i className='fas fa-hamburger' />}>
+    Page 4
+  </BottomNavItem>
+  <BottomNavItem icon={<i className='fas fa-truck' />}>
+    Page 5
+  </BottomNavItem>
+</BottomNavigation>`}
+          </pre>
           <BottomNavigation className='bottom-nav-demo'>
             <BottomNavItem
               active={true}
               icon={<i className='fas fa-user' />}
               onClick={() => alert("TESTING")}
             >
-              Profile
+              Page 1
             </BottomNavItem>
             <BottomNavItem icon={<i className='fas fa-shield-virus' />}>
-              Privacy
+              Page 2
             </BottomNavItem>
             <BottomNavItem type='center' icon={<i className='fas fa-plus' />}>
-              Settings
+              Page 3
             </BottomNavItem>
             <BottomNavItem icon={<i className='fas fa-hamburger' />}>
-              Food
+              Page 4
             </BottomNavItem>
             <BottomNavItem icon={<i className='fas fa-truck' />}>
-              Truck
+              Page 5
             </BottomNavItem>
           </BottomNavigation>
         </section>
         <section className='showcase-item'>
+          <Text type='h2'>Breadcrumb Component</Text>
+          <pre>
+            {`
+<Breadcrumb
+  crumbs={[
+    {
+      label: "crumb 1",
+      onClick: () => {
+        console.log("crumb1");
+      }
+    }
+  ]}
+/>`}
+          </pre>
           <Breadcrumb
             crumbs={[
               {
@@ -173,6 +301,26 @@ const App = () => {
           />
         </section>
         <section className='showcase-item'>
+          <Text type='h2'>Button Component</Text>
+          <pre>
+            {`
+<Button
+  curve='curved'
+  id='button-1'
+  onClick={() => {
+    console.log("button-1");
+  }}
+  buttonsize='S'
+  className='test'
+  >
+  Primary button
+</Button>
+
+curve-->       'curved','rounded','flat'
+buttonsize-->  'S','M','L'
+type-->        'primary','secondary','text'
+`}
+          </pre>
           <div className='flex-row'>
             <Button
               curve='curved'
@@ -251,6 +399,17 @@ const App = () => {
           </div>
         </section>
         <section className='showcase-item'>
+          <Text type='h2'>Checkbox Component</Text>
+          <pre>
+            {`
+<Checkbox
+  name='options'
+  onChange={(value) => toggleCheckbox1(value)}
+  checked={checkboxFlag1}
+  label='IceCream'
+/>
+`}
+          </pre>
           <div className='flex-row'>
             <Checkbox
               name='options'
@@ -274,6 +433,21 @@ const App = () => {
           </div>
         </section>
         <section className='showcase-item'>
+          <Text type='h2'>Chip Component</Text>
+          <pre>
+            {`
+<Chip
+  onClose={() => console.log("HANDLE CHIP CLOSE")}
+  icon={<i className='fas fa-thumbs-up' />}
+  dismissable={true}
+  color='white'
+  >
+  Label
+</Chip>
+
+color--> 'white','orange'
+`}
+          </pre>{" "}
           <Chip
             onClose={() => console.log("HANDLE CHIP CLOSE")}
             icon={<i className='fas fa-thumbs-up' />}
@@ -292,18 +466,49 @@ const App = () => {
           </Chip>
         </section>
         <section className='showcase-item'>
-          <Column md={3} className='sub-col'>
+          <Text type='h2'>Column Component</Text>
+          <pre>
+            {`
+<Column xs={12} sm={12} md={12} lg={12}>//content</Column>
+
+xs-> extra small[1-12], sm-> small media[1-12], md-> media device[1-12], lg-> large device[1-12]
+`}
+          </pre>
+          <Column md={3} className='grid-content'>
             Column 1
           </Column>
-          <Column id='test' md={3}>
+          <Column className='grid-content' id='test' md={3}>
             Column 2
           </Column>
-          <Column md={3}>Column 3</Column>
-          <Column md={3}>Column 4</Column>
-          <Column sm={6}>Column 5</Column>
-          <Column lg={6}>Column 6</Column>
+          <Column className='grid-content' md={3}>
+            Column 3
+          </Column>
+          <Column className='grid-content' md={3}>
+            Column 4
+          </Column>
+          <Column className='grid-content' sm={6}>
+            Column 5
+          </Column>
+          <Column className='grid-content' lg={6}>
+            Column 6
+          </Column>
         </section>
         <section className='showcase-item'>
+          <Text type='h2'>DatePicker Component</Text>
+          <pre>
+            {`
+<DatePicker
+  type='text'
+  value={dateValue}
+  onChange={(val) => setDateValue(val)}
+  className='date-field'
+  label='Date of birth'
+  minDate={new Date("03-22-2021")}
+  maxDate={new Date("12-31-2022")}
+  iconRight={<i className='fas fa-calendar-alt' />}
+/>
+`}
+          </pre>
           <DatePicker
             type='text'
             value={dateValue}
@@ -316,6 +521,43 @@ const App = () => {
           />
         </section>
         <section className='showcase-item'>
+          <Text type='h2'>Dialog Component</Text>
+          <pre>
+            {`
+<button
+  className='modal-anchor-btn'
+  onClick={() => toggleDialog(!showDialog)}
+  >
+  Click me
+</button>
+{showDialog && (
+<Dialog
+  id='demoModal'
+  open={showDialog}
+  hide={() => toggleDialog(!showDialog)}
+  header={true}
+>
+  <div className='dialog-title'>
+    <Text type='h5'>Dialog Title</Text>
+  </div>
+  <div className='dialog-content'>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+    enim ad minim veniam, quis nostrud exercitation ullamco laboris
+    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+    in reprehenderit in voluptate
+  </div>
+  <div className='dialog-footer'>
+    <button
+      onClick={() => toggleDialog(!showDialog)}
+      className='dismiss-dialog'
+    >
+      Dismiss
+    </button>
+  </div>
+</Dialog>
+)}`}
+          </pre>
           <button
             className='modal-anchor-btn'
             onClick={() => toggleDialog(!showDialog)}
@@ -351,49 +593,127 @@ const App = () => {
           )}
         </section>
         <section className='showcase-item'>
+          <Text type='h2'>Floating Action button Component</Text>
+          <pre>
+            {`
+<FloatingButton
+  icon={<i className='fas fa-times' />}
+  onClick={() => console.log("button 2 clicked")}
+  color='white'
+  size='medium'
+  >
+  Close
+</FloatingButton>
+
+color--> 'white','orange'
+size-->  'S','M'
+`}
+          </pre>
           <FloatingButton
             icon={<i className='fas fa-plus' />}
             onClick={() => console.log("button 1 clicked")}
-            color='red'
-            size='small'
+            color='orange'
+            size='S'
           />
           <FloatingButton
             icon={<i className='fas fa-times' />}
             onClick={() => console.log("button 2 clicked")}
             color='white'
-            size='medium'
+            size='M'
           >
             Close
           </FloatingButton>
           <FloatingButton
             // icon={<i className='fas fa-times' />}
             onClick={() => console.log("button 3 clicked")}
-            color='red'
-            size='small'
+            color='orange'
+            size='M'
           >
             Test floating button
           </FloatingButton>
         </section>
         <section className='showcase-item'>
-          <Text type='h1'>heading 1 --{`>`} TITLE </Text>
-          <Text type='h2'>heading 2 --{`>`} TITLE </Text>
-          <Text type='h3'>heading 3 --{`>`} TITLE</Text>
-          <Text type='h4'>heading 4 --{`>`} TITLE</Text>
-          <Text type='h5'>heading 5 --{`>`} TITLE</Text>
-          <Text type='h6'>heading 6 --{`>`} TITLE</Text>
-          <Text type='sh'>sub heading --{`>`} TITLE</Text>
-          <Text type='sb-h1'>semibold-heading 1 --{`>`} TITLE</Text>
-          <Text type='sb-h2'>semibold-heading 2 --{`>`} TITLE</Text>
-          <Text type='h7'>hheading 7 --{`>`} TITLE</Text>
-          <Text type='h8'>hheading 8 --{`>`} TITLE</Text>
-          <Text type='b1'>body 1 --{`>`} TITLE</Text>
-          <Text type='b2'>body 2 --{`>`} TITLE</Text>
-          <Text type='b3'>body 3 --{`>`} TITLE</Text>
-          <Text type='subtitle'>subtitle --{`>`} TITLE</Text>
-          <Text type='caption'>caption --{`>`} TITLE</Text>
-          <Text type='info'>info --{`>`} TITLE</Text>
+          <Text type='h2'>InputField Component</Text>
+          <pre>
+            {`
+<InputField
+  type='text'
+  value={textValue}
+  onChange={(val) => setTextValue(val)}
+  className='text-field'
+  label='Full Name'
+  onBlur={(event) => {
+    console.log("ON BLUR EVENT", event?.target?.value);
+  }}
+/>
+
+type--> 'text','number','mobile'
+`}
+          </pre>
+          <InputField
+            type='text'
+            value={textValue}
+            onChange={(val) => setTextValue(val)}
+            className='text-field'
+            label='Full Name'
+            onBlur={(event) => {
+              console.log("ON BLUR EVENT", event?.target?.value);
+            }}
+          />
+          <InputField
+            type='number'
+            value={numValue}
+            onChange={(val) => setNumValue(val)}
+            className='num-field'
+            label='Income'
+            iconLeft={<i className='fas fa-user' />}
+          />
+          <InputField
+            type='mobile'
+            value={mobValue}
+            onChange={(val) => setMobValue(val)}
+            className='num-field'
+            label='Mobile Number'
+          />
         </section>
         <section className='showcase-item'>
+          <Text type='h2'>Text Component</Text>
+          <pre>
+            {`
+<Text type='h1'>Lorem Ipsum</Text>
+
+type--> 'h1','h2','h3','h4','h5','h6','sh','sb-h1','sb-h2'h7','h8','b1','b2','b3','subtitle','caption','info'
+`}
+          </pre>
+          <Text type='h1'>Lorem Ipsum ['h1']</Text>
+          <Text type='h2'>Lorem Ipsum ['h2']</Text>
+          <Text type='h3'>Lorem Ipsum ['h3']</Text>
+          <Text type='h4'>Lorem Ipsum ['h4']</Text>
+          <Text type='h5'>Lorem Ipsum ['h5']</Text>
+          <Text type='h6'>Lorem Ipsum ['h6']</Text>
+          <Text type='sh'>Lorem Ipsum ['sh']</Text>
+          <Text type='sb-h1'>Lorem Ipsum ['sb-h1']</Text>
+          <Text type='sb-h2'>Lorem Ipsum ['sb-h2']</Text>
+          <Text type='h7'>Lorem Ipsum ['h7']</Text>
+          <Text type='h8'>Lorem Ipsum ['h8']</Text>
+          <Text type='b1'>Lorem Ipsum ['b1']</Text>
+          <Text type='b2'>Lorem Ipsum ['b2']</Text>
+          <Text type='b3'>Lorem Ipsum ['b3']</Text>
+          <Text type='subtitle'>Lorem Ipsum ['subtitle']</Text>
+          <Text type='caption'>Lorem Ipsum ['caption']</Text>
+          <Text type='info'>Lorem Ipsum ['info']</Text>
+        </section>
+        <section className='showcase-item'>
+          <Text type='h2'>Link Component</Text>
+          <pre>
+            {`
+<Link target='_blank' size='M' href='/'>
+  Clickable Link[medium]
+</Link>
+
+size--> 'S' ,'M', 'L'
+`}
+          </pre>
           <Link
             target='_blank'
             style={{ background: "yellow" }}
@@ -413,6 +733,25 @@ const App = () => {
           </Link>
         </section>
         <section className='showcase-item'>
+          <Text type='h2'>MenuDropdown Component</Text>
+          <pre>
+            {`
+<MenuDropdown
+  label={
+    <span>
+      <i className='fas fa-list' /> Simple Menu
+    </span>
+  }
+  alignMenu='left'
+  >
+  <MenuItem onClick={() => console.log("HELLO WORLD")}>Home</MenuItem>
+  <MenuItem>Settings</MenuItem>
+  <MenuItem>Logout</MenuItem>
+</MenuDropdown>
+
+alignMenu--> 'left','right'
+`}
+          </pre>
           <MenuDropdown
             label={
               <span>
@@ -424,32 +763,545 @@ const App = () => {
             <MenuItem onClick={() => console.log("HELLO WORLD")}>Home</MenuItem>
             <MenuItem>Settings</MenuItem>
             <MenuItem>Logout</MenuItem>
-            <option>Missing items</option>
           </MenuDropdown>
         </section>
         <section className='showcase-item'>
-          <AppBar></AppBar>
+          <Text type='h2'>Progress Component</Text>
+          <pre>
+            {`
+<Progress
+  mode='radial'
+  total={4}
+  value={1}
+  label={<span>1/4</span>}
+  size={40}
+/>
+
+mode--> 'radial','linear'
+type--> 'step' [default],'percentage'
+success--> true / false [boolean]
+error--> true / false [boolean]
+`}
+          </pre>
+          <Column md={2}>
+            <div className='grid-content'>
+              <Progress
+                mode='radial'
+                total={4}
+                value={1}
+                label={<span>1/4</span>}
+                size={40}
+              ></Progress>
+            </div>
+          </Column>
+          <Column md={2}>
+            <div className='grid-content'>
+              {" "}
+              <Progress
+                mode='radial'
+                total={4}
+                value={2}
+                label={<span>2/4</span>}
+                size={40}
+              ></Progress>
+            </div>
+          </Column>
+          <Column md={2}>
+            <div className='grid-content'>
+              <Progress
+                mode='radial'
+                total={4}
+                value={3}
+                label={<span>3/4</span>}
+                size={40}
+              ></Progress>
+            </div>
+          </Column>
+          <Column md={2}>
+            <div className='grid-content'>
+              <Progress
+                mode='radial'
+                total={4}
+                value={4}
+                label={<span>4/4</span>}
+                size={40}
+                success={false}
+              ></Progress>
+            </div>
+          </Column>
+          <Column md={2}>
+            <div className='grid-content'>
+              <Progress
+                mode='radial'
+                total={4}
+                value={4}
+                label={<span>4/4</span>}
+                size={40}
+                error={true}
+              ></Progress>
+            </div>
+          </Column>
+          <Column md={2}>
+            <div className='grid-content'>
+              <Progress
+                mode='radial'
+                total={4}
+                value={4}
+                label={<span>4/4</span>}
+                size={40}
+                success={true}
+              ></Progress>
+            </div>
+          </Column>
+          <Column md={2}>
+            <div className='grid-content'>
+              <Progress
+                mode='radial'
+                total={100}
+                value={25}
+                label={<span>25%</span>}
+                size={40}
+                type='percentage'
+              ></Progress>
+            </div>
+          </Column>
+          <Column md={6}>
+            <div className='grid-content'>
+              {" "}
+              <Progress
+                mode='linear'
+                total={100}
+                value={90}
+                label={null}
+                // label={<span>Loading assets</span>}
+                strokeWidth={5}
+              ></Progress>
+            </div>
+          </Column>
         </section>
         <section className='showcase-item'>
-          <AppBar></AppBar>
+          <Text type='h2'>RadioButton Component</Text>
+          <pre>
+            {`
+<RadioButton
+  name='fruit'
+  value='Apple'
+  label='Apple'
+  onChange={(val) => setRadioFlag(val)}
+  checked={radioFlag === "Apple"}
+/>`}
+          </pre>
+          <RadioButton
+            name='fruit'
+            value='Apple'
+            label='Apple'
+            onChange={(val) => setRadioFlag(val)}
+            checked={radioFlag === "Apple"}
+          />
+          <RadioButton
+            name='fruit'
+            value='Peach'
+            label='Peach'
+            onChange={(val) => setRadioFlag(val)}
+            checked={radioFlag === "Peach"}
+          />
+          <RadioButton
+            name='fruit'
+            value='Orange'
+            label='Orange'
+            onChange={(val) => setRadioFlag(val)}
+            checked={radioFlag === "Orange"}
+          />
+          <RadioButton
+            name='fruit'
+            value='Kiwi'
+            label='Kiwi'
+            disabled={true}
+            onChange={(val) => setRadioFlag(val)}
+            checked={radioFlag === "Kiwi"}
+          />
         </section>
         <section className='showcase-item'>
-          <AppBar></AppBar>
+          <Text type='h2'>SelectDropDown Component</Text>
+          <pre>
+            {`
+<SelectDropDown
+  value={city}
+  onChange={(value) => setCity(value)}
+  label='Select a city'
+  >
+  <option value='Mumbai'>Mumbai</option>
+  <option value='NewDelhi'>New Delhi</option>
+  <option value='Kolkata'>Kolkata</option>
+  <option value='Chennai'>Chennai</option>
+  <option value='Bengaluru'>Bengaluru</option>
+</SelectDropDown>`}
+          </pre>
+          <SelectDropDown
+            value={city}
+            onChange={(value) => setCity(value)}
+            label='Select a city'
+          >
+            <option value='Mumbai'>Mumbai</option>
+            <option value='NewDelhi'>New Delhi</option>
+            <option value='Kolkata'>Kolkata</option>
+            <option value='Chennai'>Chennai</option>
+            <option value='Bengaluru'>Bengaluru</option>
+          </SelectDropDown>
         </section>
         <section className='showcase-item'>
-          <AppBar></AppBar>
+          <Text type='h2'>RangeSlider Component</Text>
+          <pre>
+            {`
+<RangeSlider
+  value={sliderVal}
+  start={0}
+  min={0}
+  max={100}
+  step={1}
+  onChange={(val) => setSliderVal(val)}
+  label={<span>LABEL</span>}
+  showValue={true}
+/>`}
+          </pre>
+          <RangeSlider
+            value={sliderVal}
+            start={0}
+            min={0}
+            max={100}
+            step={1}
+            onChange={(val) => setSliderVal(val)}
+            label={<span>LABEL</span>}
+            showValue={true}
+          />
         </section>
         <section className='showcase-item'>
-          <AppBar></AppBar>
+          <Text type='h2'>Tab cards Component</Text>
+          <pre>
+            {`
+<Tabs mode='default'>
+  <TabCard active={true} title={<span>TAB I</span>}>
+    TAB ONE
+  </TabCard>
+  <TabCard title={<span>TAB II</span>}>
+    TAB TWO
+  </TabCard>
+  <TabCard title={<span>TAB III</span>}>
+    TAB THREE
+  </TabCard>
+</Tabs>`}
+          </pre>
+          <Tabs mode='default'>
+            <TabCard active={true} title={<span>TAB I</span>}>
+              TAB ONE: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate
+            </TabCard>
+            <TabCard title={<span>TAB II</span>}>
+              TAB TWO: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate
+            </TabCard>
+            <TabCard title={<span>TAB III</span>}>
+              TAB THREE: Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+              dolor in reprehenderit in voluptate
+            </TabCard>
+          </Tabs>
         </section>
         <section className='showcase-item'>
-          <AppBar></AppBar>
+          <Text type='h2'>TabSelect Component</Text>
+          <pre>
+            {`
+<TabSelect
+  onChange={(val) => setSports(val)}
+  className='tab-select'
+  labelClassName='tab-select-label'
+  optionClassName='tab-select-option'
+  activeOptionClassName='selected-tab'
+  options={[
+    {
+      text: "YES",
+      value: true,
+      icon: null
+    },
+    {
+      text: "NO",
+      value: false,
+      icon: null
+    }
+  ]}
+  value={sports}
+  >
+  <label>Are you interested in adventure sports?</label>
+</TabSelect>
+`}
+          </pre>
+          <TabSelect
+            onChange={(val) => setSmoker(val)}
+            className='tab-select'
+            labelClassName='tab-select-label'
+            optionClassName='tab-select-option'
+            activeOptionClassName='selected-tab'
+            options={[
+              {
+                text: "YES",
+                value: true,
+                icon: null
+              },
+              {
+                text: "NO",
+                value: false,
+                icon: null
+              }
+            ]}
+            value={smoker}
+          >
+            <label>Are you interested in adventure sports?</label>
+          </TabSelect>
         </section>
         <section className='showcase-item'>
-          <AppBar></AppBar>
+          <Text type='h2'>Tag Component</Text>
+          <pre>
+            {`
+<Tag type='default'>Default</Tag>
+
+type --> default, success, inprogress, error, warn, pending, pending, info, unavailable
+mode --> dark / null
+`}
+          </pre>
+          <div className='flex-row'>
+            <>
+              <Tag type='default'>Default</Tag>
+            </>
+            <>
+              <Tag type='success'>Success</Tag>
+            </>
+            <>
+              <Tag type='inprogress'>In Progress</Tag>
+            </>
+            <>
+              <Tag type='error'>Danger</Tag>
+            </>
+            <>
+              <Tag type='warn'>Warning</Tag>
+            </>
+            <>
+              <Tag type='pending'>Pending</Tag>
+            </>
+            <>
+              <Tag type='info'>Info</Tag>
+            </>
+            <>
+              <Tag type='unavailable'>Unavailable</Tag>
+            </>
+          </div>
+          <div className='flex-row'>
+            <>
+              <Tag mode='dark' type='default'>
+                Default
+              </Tag>
+            </>
+            <>
+              <Tag mode='dark' type='success'>
+                Success
+              </Tag>
+            </>
+            <>
+              <Tag mode='dark' type='inprogress'>
+                In Progress
+              </Tag>
+            </>
+            <>
+              <Tag mode='dark' type='error'>
+                Danger
+              </Tag>
+            </>
+            <>
+              <Tag mode='dark' type='warn'>
+                Warning
+              </Tag>
+            </>
+            <>
+              <Tag mode='dark' type='pending'>
+                Pending
+              </Tag>
+            </>
+            <>
+              <Tag mode='dark' type='info'>
+                Info
+              </Tag>
+            </>
+            <>
+              <Tag mode='dark' type='unavailable'>
+                Unavailable
+              </Tag>
+            </>
+          </div>
         </section>
         <section className='showcase-item'>
-          <AppBar></AppBar>
+          <Text type='h2'>Toast Component</Text>
+          <pre>
+            {`
+toast.open("MESSAGE",time_in_milliseconds)
+toast.success("MESSAGE",time_in_milliseconds)
+toast.error("MESSAGE",time_in_milliseconds)
+toast.info("MESSAGE",time_in_milliseconds)
+toast.warn("MESSAGE",time_in_milliseconds)
+`}
+          </pre>
+          <Button
+            type='primary'
+            curve='curved'
+            size='M'
+            onClick={() => {
+              toast.open(
+                "TESTING TESTING TESTING TESTING TESTING TESTING",
+                4000000
+              );
+            }}
+          >
+            Test your toast [default]
+          </Button>
+          <Button
+            type='primary'
+            curve='curved'
+            size='M'
+            onClick={() => {
+              toast.success(
+                "TESTING TESTING TESTING TESTING TESTING TESTING",
+                4000
+              );
+            }}
+          >
+            Test your toast [success]
+          </Button>
+
+          <Button
+            type='primary'
+            curve='curved'
+            size='M'
+            onClick={() => {
+              toast.error(
+                "TESTING TESTING TESTING TESTING TESTING TESTING",
+                4000
+              );
+            }}
+          >
+            Test your toast [error]
+          </Button>
+          <Button
+            type='primary'
+            curve='curved'
+            size='M'
+            onClick={() => {
+              toast.info("TESTING TESTING TESTING TESTING", 4000000);
+            }}
+          >
+            Test your toast [info]
+          </Button>
+          <Button
+            type='primary'
+            curve='curved'
+            size='M'
+            onClick={() => {
+              toast.warn(
+                "TESTING TESTING TESTING TESTING TESTING TESTING",
+                4000
+              );
+            }}
+          >
+            Test your toast [warn]
+          </Button>
+        </section>
+        <section className='showcase-item'>
+          <pre>
+            {`
+<ToggleInput
+  id='smoker'
+  className='smoker'
+  name='smoker'
+  checked={toggleFlag}
+  onChange={(flag) => toggleInputFlag(flag)}
+/>
+`}
+          </pre>
+          <Text type='h2'>ToggleInput Component</Text>
+          <ToggleInput
+            id='smoker'
+            className='smoker'
+            name='smoker'
+            checked={toggleFlag}
+            onChange={(flag) => toggleInputFlag(flag)}
+          />
+        </section>
+        <section className='showcase-item'>
+          <pre>
+            {`
+<ToggleSwitch
+  id='newsletter'
+  className='newsletter'
+  checked={switchFlag}
+  onChange={(flag) => toggleSwitchFlag(flag)}
+  optionLabels={["Yes", "No"]}
+  />
+`}
+          </pre>
+          <Text type='h2'>ToggleSwitch Component</Text>
+          <ToggleSwitch
+            id='newsletter'
+            className='newsletter'
+            checked={switchFlag}
+            onChange={(flag) => toggleSwitchFlag(flag)}
+            optionLabels={["Yes", "No"]}
+          />
+        </section>
+        <section className='showcase-item'>
+          <Text type='h2'>Tooltip Component</Text>
+          <pre>
+            {`
+<Tooltip
+  title='demo react tooltip'
+  body={
+    <div>
+      <span>Something about this feature and what it does. </span>
+      <div className='flex-row'>
+        <button>I am not Sure</button>
+        <button>
+          Know more <i className='fas fa-arrow-right' />
+        </button>
+      </div>
+    </div>
+  }
+  containerClass='tooltipStyleChange'
+  >
+  <div>BottomToolTip</div>
+</Tooltip>
+`}
+          </pre>
+          <Tooltip
+            title='demo react tooltip'
+            body={
+              <div>
+                <span>Something about this feature and what it does. </span>
+                <div className='flex-row'>
+                  <button>I am not Sure</button>
+                  <button>
+                    Know more <i className='fas fa-arrow-right' />
+                  </button>
+                </div>
+              </div>
+            }
+            containerClass='tooltipStyleChange'
+          >
+            <div>BottomToolTip</div>
+          </Tooltip>
         </section>
       </UiProvidor>
     </div>

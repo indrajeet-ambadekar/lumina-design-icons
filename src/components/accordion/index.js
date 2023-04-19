@@ -59,7 +59,9 @@ export default ({ ...props }) => {
         }`}
       >
         <div
-          className={[styles["_acrdn-content"], "_ui-acrdn-content"].join(" ")}
+          className={[styles["_acrdn-content"], "elc_ui-acrdn-content"].join(
+            " "
+          )}
         >
           {children}
         </div>

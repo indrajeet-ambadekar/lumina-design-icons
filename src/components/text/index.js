@@ -31,7 +31,7 @@ export default ({ type, children, className, id, style }) => {
     <div
       className={[
         `${styles[HEADING_TYPES[type]]}`,
-        `_ui-text`,
+        `elc_ui-text`,
         `${className || ""}`
       ].join(" ")}
       id={id || null}

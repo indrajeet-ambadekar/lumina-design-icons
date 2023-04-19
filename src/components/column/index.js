@@ -7,7 +7,7 @@ export default ({ ...props }) => {
     <div
       {...subProps}
       className={[
-        `${styles["_ui-col"]}`,
+        `${styles["elc_ui-col"]}`,
         `grid-column`,
         props.className || ""
       ].join(" ")}

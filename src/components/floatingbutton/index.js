@@ -5,10 +5,10 @@ export default ({ ...props }) => {
   return (
     <div
       className={[
-        styles["_ui-flbtn"],
-        styles[`_ui-flbtn-${color || "red"}`],
-        styles[`_ui-flbtn-${size || "small"}`],
-        "_ui-flbtn",
+        styles["elc_ui-flbtn"],
+        styles[`elc_ui-flbtn-${color || "orange"}`],
+        styles[`elc_ui-flbtn-${size || "S"}`],
+        "elc_ui-flbtn",
         className || ""
       ].join(" ")}
       id={id || null}
@@ -16,9 +16,9 @@ export default ({ ...props }) => {
       onClick={onClick}
       tabIndex={-1}
     >
-      {icon ? <span className={styles["_ui-flbtn-icon"]}>{icon}</span> : ""}
+      {icon ? <span className={styles["elc_ui-flbtn-icon"]}>{icon}</span> : ""}
       {children ? (
-        <div className={styles["_ui-flbtn-label"]}>{children}</div>
+        <div className={styles["elc_ui-flbtn-label"]}>{children}</div>
       ) : (
         ""
       )}

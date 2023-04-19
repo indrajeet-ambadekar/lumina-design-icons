@@ -11,8 +11,8 @@ export default ({ ...props }) => {
   return (
     <div
       className={[
-        styles["_ui-breadcrumb"],
-        "_ui-breadcrumb",
+        styles["elc_ui-breadcrumb"],
+        "elc_ui-breadcrumb",
         className || ""
       ].join(" ")}
       id={id || null}
@@ -22,16 +22,16 @@ export default ({ ...props }) => {
         <div
           key={i}
           className={[
-            styles["_ui-breadcrumb-crumb"],
-            "_ui-breadcrumb-crumb",
+            styles["elc_ui-breadcrumb-crumb"],
+            "elc_ui-breadcrumb-crumb",
             crumbClassName || ""
           ].join(" ")}
           onClick={crumb.onClick}
         >
-          <span className={styles["_ui-breadcrumb-label"]}>
+          <span className={styles["elc_ui-breadcrumb-label"]}>
             <span>{crumb.label}</span>
           </span>
-          <span className={styles["_ui-breadcrumb-chevron"]}>
+          <span className={styles["elc_ui-breadcrumb-chevron"]}>
             {i < crumbs.length - 1 ? (
               <i className='fas fa-chevron-right' />
             ) : (

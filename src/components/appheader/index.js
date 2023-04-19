@@ -22,17 +22,17 @@ export default ({ ...props }) => {
   return (
     <div
       className={[
-        styles["_ui-header-wrapper"],
-        "_ui-header-wrapper",
+        styles["elc_ui-header-wrapper"],
+        "elc_ui-header-wrapper",
         props.className || ""
       ].join(" ")}
       id={props.id || null}
       style={props.style || {}}
     >
-      <div className={styles["_ui-header-app-logo"]}>
+      <div className={styles["elc_ui-header-app-logo"]}>
         {props.children && (
           <button
-            className={styles["_ui-header-hamburger-btn"]}
+            className={styles["elc_ui-header-hamburger-btn"]}
             onClick={() => {
               toggleMenu(!menuOpen);
             }}
@@ -41,19 +41,19 @@ export default ({ ...props }) => {
           </button>
         )}
         <img
-          src='https://static.elysium-cloud.com/images/logo.png' //'https://instainsure.hdfclife.com/static/media/26075_14.f38e95e8.svg'
+          src='https://static.elysium-cloud.com/images/logo.png'
           alt='Elysium Cloud'
-          className={styles["_ui-header-app-logo-img"]}
+          className={styles["elc_ui-header-app-logo-img"]}
           onClick={_handleLogoClick}
         />
         {props.secondaryIcon}
       </div>
-      <div className={styles["_ui-header-nav-cntnr"]}>{props.children}</div>
-      <div className={styles["_ui-header-profile-wrapper"]}>
+      <div className={styles["elc_ui-header-nav-cntnr"]}>{props.children}</div>
+      <div className={styles["elc_ui-header-profile-wrapper"]}>
         {props.profileIcon}
       </div>
       {menuOpen ? (
-        <div className={styles["_ui-header-hamburger-menu"]}>
+        <div className={styles["elc_ui-header-hamburger-menu"]}>
           {props.children}
         </div>
       ) : (

@@ -8,7 +8,7 @@ export default ({ ...props }) => {
       e.stopPropagation();
     }
   };
-  let sizeClass = `_ui-link-${
+  let sizeClass = `elc_ui-link-${
     ["S", "M", "L"].includes(props.size) ? SIZE_MAP[props.size] : "small"
   }`;
   return (
@@ -16,11 +16,11 @@ export default ({ ...props }) => {
       href={props.href || "/"}
       target={props.target || "_blank"}
       className={[
-        styles["_ui-link"],
-        "_ui-link",
+        styles["elc_ui-link"],
+        "elc_ui-link",
         props.className || "",
         styles[sizeClass],
-        props.disabled ? styles["_ui-link-disabled"] : ""
+        props.disabled ? styles["elc_ui-link-disabled"] : ""
       ].join(" ")}
       id={props.id || null}
       onClick={_handleClick}

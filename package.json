@@ -4,7 +4,7 @@
   "description": "Made with create-react-library",
   "author": "indrajeet-ambadekar",
   "license": "MIT",
-  "repository": "indrajeet-ambadekar/elysium-cloud-ui",
+  "repository": "https://github.com/indrajeet-ambadekar/elysum-cloud-ui.git",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
@@ -22,7 +22,9 @@
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
     "predeploy": "cd example && npm install && npm run build",
-    "deploy": "gh-pages -d example/build"
+    "add_package_json": "cp -a ./config/package.json ./dist/",
+    "deploy": "gh-pages -d example/build",
+    "publish_build": "npm run add_package_json && cd dist && npm publish && cd ../"
   },
   "peerDependencies": {
     "react": "^17.0.2",

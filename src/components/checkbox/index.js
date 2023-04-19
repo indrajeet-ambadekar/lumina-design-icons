@@ -7,10 +7,10 @@ export default ({ ...props }) => {
     <div
       id={props.id || null}
       className={[
-        `${styles["_ui-checkbox"]}`,
+        `${styles["elc_ui-checkbox"]}`,
         "oneui-checkbox",
         `${props.className || ""}`,
-        props.disabled ? styles["_ui-checkbox-disabled"] : ""
+        props.disabled ? styles["elc_ui-checkbox-disabled"] : ""
       ].join(" ")}
     >
       <div
@@ -30,7 +30,7 @@ export default ({ ...props }) => {
         <label htmlFor={`checkbox-${index}`}></label>
       </div>
       {props.label && (
-        <div className={`${styles["_ui-checkbox-label"]}`}>
+        <div className={`${styles["elc_ui-checkbox-label"]}`}>
           {props.label || ""}
         </div>
       )}
