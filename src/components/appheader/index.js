@@ -41,7 +41,7 @@ export default ({ ...props }) => {
           </button>
         )}
         <img
-          src='https://static.elysium-cloud.com/images/logo.png'
+          src='https://s3.amazonaws.com/static.elysium-cloud.com/images/logo.png'
           alt='Elysium Cloud'
           className={styles["elc_ui-header-app-logo-img"]}
           onClick={_handleLogoClick}
