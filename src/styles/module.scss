@@ -2,8 +2,8 @@
   font-family: "Montserrat", sans-serif;
 }
 
-$red-carnelian: #b11116;
-$red-pigment: #ed1c24;
+$red-carnelian: rgba(196, 49, 33, 0.75);
+$red-pigment: rgba(234, 97, 83, 1);
 $blue-persian: #005e9e;
 $white: #ffffff;
 $gray-isabelline: #f2f0f0;
@@ -15,7 +15,7 @@ $green: #05a660;
 $fulvous: #e57a00;
 $gray-light: #d1d3d4;
 $blue-bolt: #00c0f3;
-$button-primary: #ed1c24;
+$button-primary: rgba(234, 97, 83, 0.75);
 $button-seconday: #f9f9f9;
 @mixin card-shadow {
   -webkit-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.25);
@@ -2522,4 +2522,9 @@ a.elc_ui-link-disabled {
   margin-right: 10px;
   background-color: transparent;
   font-size: 18px;
+}
+
+.elc_ui-icon-wrapper {
+  margin: 5px;
+  @include vertical-center();
 }

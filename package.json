@@ -16,11 +16,10 @@
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
     "watch": "onchange 'src/**/*.**' 'example/**/*.**' './package.json' -- prettier --write {{changed}}",
     "prepare": "run-s build",
-    "test": "run-s test:unit test:lint test:build",
-    "test:build": "run-s build",
-    "test:lint": "eslint .",
-    "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
-    "test:watch": "react-scripts test --env=jsdom",
+    "prebuild": "rimraf icon-src && rimraf icon-dist",
+    "build-icons": "npm run prebuild && npm run svgr && rollup -c && npm run copy-icons-build",
+    "copy-icons-build": "rimraf src/components/icons/icon-lib.js && mv icon-dist/icon-lib.js src/components/icons/icon-lib.js",
+    "svgr": "svgr --icon --title-prop --replace-attr-values '#292929bf=currentColor' -d icon-src -- icons-svg",
     "predeploy": "cd example && npm install && npm run build",
     "add_package_json": "cp -a ./config/package.json ./dist/",
     "deploy": "gh-pages -d example/build",
@@ -34,6 +33,8 @@
     "react-transition-group": "^4.4.1"
   },
   "devDependencies": {
+    "@rollup/plugin-babel": "^6.0.3",
+    "@svgr/cli": "^7.0.0",
     "babel-eslint": "^10.0.3",
     "cross-env": "^7.0.2",
     "eslint": "^6.8.0",
@@ -56,6 +57,8 @@
     "react-dom": "^17.0.2",
     "react-scripts": "^4.0.3",
     "react-transition-group": "^4.4.1",
+    "rollup": "^1.32.1",
+    "rollup-plugin-filesize": "^10.0.0",
     "sass": "^1.62.0"
   },
   "files": [

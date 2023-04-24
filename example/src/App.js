@@ -33,7 +33,9 @@ import {
   useToast,
   ToggleInput,
   ToggleSwitch,
-  Tooltip
+  Tooltip,
+  FlatIcon,
+  ElysiumCloudIcons
 } from "elysium-cloud-ui";
 import "elysium-cloud-ui/dist/index.css";
 
@@ -56,6 +58,11 @@ const App = () => {
   const [smoker, setSmoker] = useState(true);
   const [occupation, setOccupation] = useState("salaried");
   const [fruitName, setFruitName] = useState("");
+  const _renderIcon = (icon) => {
+    return React.createElement(ElysiumCloudIcons[icon], {
+      style: { fontSize: 22, margin: `10px` }
+    });
+  };
   return (
     <div className='showcase-container'>
       <UiProvidor>
@@ -1302,6 +1309,17 @@ toast.warn("MESSAGE",time_in_milliseconds)
           >
             <div>BottomToolTip</div>
           </Tooltip>
+        </section>
+
+        <section className='showcase-item'>
+          <Text type='h2'>Icon Component</Text>
+          <div className='icon-cntnr'>
+            {Object.keys(ElysiumCloudIcons).map((icon, i) => (
+              <Column md={1} key={i}>
+                <span title={icon}>{_renderIcon(icon)}</span>
+              </Column>
+            ))}
+          </div>
         </section>
       </UiProvidor>
     </div>

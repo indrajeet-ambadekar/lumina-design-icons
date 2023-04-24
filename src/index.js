@@ -13,6 +13,7 @@ import Chip from "./components/Chip";
 import Column from "./components/column";
 import DatePicker from "./components/datepicker";
 import Dialog from "./components/dialog";
+import FlatIcon from "./components/icons";
 import FloatingButton from "./components/floatingbutton";
 import InputField from "./components/inputfield";
 import Link from "./components/link";
@@ -29,6 +30,8 @@ import { ToastProvider, useToast } from "./components/toast";
 import ToggleInput from "./components/toggleInput";
 import ToggleSwitch from "./components/toggleswitch";
 import Tooltip from "./components/tooltip";
+
+import * as ElysiumCloudIcons from "./components/icons/icon-lib";
 
 export const UiProvidor = ({ children }) => {
   useEffect(() => {
@@ -55,6 +58,7 @@ export {
   Column,
   DatePicker,
   Dialog,
+  FlatIcon,
   FloatingButton,
   InputField,
   Link,
@@ -73,5 +77,6 @@ export {
   useToast,
   ToggleInput,
   ToggleSwitch,
-  Tooltip
+  Tooltip,
+  ElysiumCloudIcons
 };
