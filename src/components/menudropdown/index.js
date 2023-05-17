@@ -32,10 +32,11 @@ const MenuDropdown = ({ ...props }) => {
         props?.className || ""
       ].join(" ")}
     >
-      <div className={styles["elc_ui-menu-container"]}>
+      <div className={[styles["elc_ui-menu-container"],'elc_ui-menu-container'].join(" ")}>
         <button
           className={[
             styles["elc_ui-menu-dropdown-button"],
+            "elc_ui-menu-dropdown-button",
             props?.buttonClassName || ""
           ].join(" ")}
           onClick={() => setMenuVisible(!isMenuVisible)}

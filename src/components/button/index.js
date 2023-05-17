@@ -10,7 +10,7 @@ export default ({ ...props }) => {
       {...subProps}
       className={[
         `${styles["elc_ui-button"]}`,
-        "oneelc_ui-button",
+        "elc_ui-button",
         `${props.className || ""}`
       ].join(" ")}
     >

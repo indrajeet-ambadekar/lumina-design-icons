@@ -27,14 +27,24 @@ export const Toast = (props) => {
     <div
       className={[
         styles["elc_ui-toast"],
-        styles[`elc_ui-toast-${props.type || "default"}`]
+        styles[`elc_ui-toast-${props.type || "default"}`],
+        "elc_ui-toast"
       ].join(" ")}
     >
-      <div className={styles["elc_ui-toast__text"]}>{props.children}</div>
+      <div
+        className={[styles["elc_ui-toast__text"], "elc_ui-toast__text"].join(
+          " "
+        )}
+      >
+        {props.children}
+      </div>
       <div>
         <button
           onClick={props.close}
-          className={styles["elc_ui-toast__close-btn"]}
+          className={[
+            styles["elc_ui-toast__close-btn"],
+            "elc_ui-toast__close-btn"
+          ].join(" ")}
         >
           <i className='fas fa-times-circle' />
         </button>

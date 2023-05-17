@@ -8,7 +8,7 @@ export default ({ ...props }) => {
       id={props.id || null}
       className={[
         `${styles["elc_ui-checkbox"]}`,
-        "oneui-checkbox",
+        "elc-ui-checkbox",
         `${props.className || ""}`,
         props.disabled ? styles["elc_ui-checkbox-disabled"] : ""
       ].join(" ")}

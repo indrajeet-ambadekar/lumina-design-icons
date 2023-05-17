@@ -1,6 +1,6 @@
 {
   "name": "elysium-cloud-ui",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Made with create-react-library",
   "author": "indrajeet-ambadekar",
   "license": "MIT",
@@ -23,7 +23,8 @@
     "predeploy": "cd example && npm install && npm run build",
     "add_package_json": "cp -a ./config/package.json ./dist/",
     "deploy": "gh-pages -d example/build",
-    "publish_package": "npm run build && npm run add_package_json && cd dist && npm publish && cd ../"
+    "publish_package": "npm run build && npm run add_package_json && cd dist && npm publish && cd ../",
+    "custom-svgr": "rm -rf custom-icon-src/* && svgr --icon --title-prop --replace-attr-values '#292929bf=currentColor' -d custom-icon-src -- custom-icon-svg"
   },
   "peerDependencies": {
     "react": "^17.0.2",

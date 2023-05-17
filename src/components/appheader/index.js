@@ -29,10 +29,18 @@ export default ({ ...props }) => {
       id={props.id || null}
       style={props.style || {}}
     >
-      <div className={styles["elc_ui-header-app-logo"]}>
+      <div
+        className={[
+          styles["elc_ui-header-app-logo"],
+          "elc_ui-header-app-logo"
+        ].join(" ")}
+      >
         {props.children && (
           <button
-            className={styles["elc_ui-header-hamburger-btn"]}
+            className={[
+              styles["elc_ui-header-hamburger-btn"],
+              "elc_ui-header-hamburger-btn"
+            ].join(" ")}
             onClick={() => {
               toggleMenu(!menuOpen);
             }}
@@ -43,17 +51,37 @@ export default ({ ...props }) => {
         <img
           src='https://s3.amazonaws.com/static.elysium-cloud.com/images/logo.png'
           alt='Elysium Cloud'
-          className={styles["elc_ui-header-app-logo-img"]}
+          className={[
+            styles["elc_ui-header-app-logo-img"],
+            "elc_ui-header-app-logo-img"
+          ].join(" ")}
           onClick={_handleLogoClick}
         />
         {props.secondaryIcon}
       </div>
-      <div className={styles["elc_ui-header-nav-cntnr"]}>{props.children}</div>
-      <div className={styles["elc_ui-header-profile-wrapper"]}>
+      <div
+        className={[
+          styles["elc_ui-header-nav-cntnr"],
+          "elc_ui-header-nav-cntnr"
+        ].join(" ")}
+      >
+        {props.children}
+      </div>
+      <div
+        className={[
+          styles["elc_ui-header-profile-wrapper"],
+          "elc_ui-header-profile-wrapper"
+        ].join(" ")}
+      >
         {props.profileIcon}
       </div>
       {menuOpen ? (
-        <div className={styles["elc_ui-header-hamburger-menu"]}>
+        <div
+          className={[
+            styles["elc_ui-header-hamburger-menu"],
+            "elc_ui-header-hamburger-menu"
+          ].join(" ")}
+        >
           {props.children}
         </div>
       ) : (

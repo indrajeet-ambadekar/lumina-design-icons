@@ -2171,10 +2171,11 @@ a.elc_ui-link-disabled {
 // ######################## TOAST STYLES ##############################
 .elc_ui-toasts-wrapper {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 1px;
+  right: 10px;
   display: flex;
   flex-direction: column;
+  z-index: 5000;
 }
 
 .elc_ui-toast {
