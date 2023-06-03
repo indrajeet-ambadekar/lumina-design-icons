@@ -16,7 +16,9 @@ export default ({ ...props }) => {
     >
       {props.children}
       {icon ? (
-        <span className={`${styles["elc_ui-button-icon"]}`}>{icon}</span>
+        <span className={`${styles["elc_ui-button-icon"]} elc_ui-button-icon`}>
+          {icon}
+        </span>
       ) : (
         ""
       )}

@@ -32,7 +32,9 @@ export default ({ ...props }) => {
       >
         {props.children}
       </div>
-      <div className={styles["elc_ui-tab-select-option-container"]}>
+      <div
+        className={`${styles["elc_ui-tab-select-option-container"]} elc_ui-tab-select-option-container`}
+      >
         {(props?.options || []).map((_item, i) => (
           <div
             key={i}

@@ -60,7 +60,8 @@ export default ({ ...props }) => {
       <div
         className={[
           styles["elc_ui-dropdown"],
-          isFocused ? styles["elc_ui-dropdown-focused"] : ""
+          isFocused ? styles["elc_ui-dropdown-focused"] : "",
+          "elc_ui-dropdown"
         ].join(" ")}
         tabIndex='0'
         onFocus={_handleOnFocus}
@@ -69,13 +70,14 @@ export default ({ ...props }) => {
         <div
           className={[
             styles["elc_ui-select-label"],
-            displayValue !== label ? styles["elc_ui-select-label-visible"] : ""
+            displayValue !== label ? styles["elc_ui-select-label-visible"] : "",
+            "elc_ui-select-label"
           ].join(" ")}
         >
           {label}
         </div>
         <div
-          className={styles["elc_ui-dropdown-header"]}
+          className={`${styles["elc_ui-dropdown-header"]} elc_ui-dropdown-header`}
           onClick={toggleDropdown}
         >
           {displayValue}
@@ -91,13 +93,16 @@ export default ({ ...props }) => {
         <div
           className={[
             `${styles["elc_ui-dropdown-body"]}`,
-            `${isOpen ? styles["elc_ui-dropdown-body-open"] : ""}`
+            "elc_ui-dropdown-body"`${
+              isOpen ? styles["elc_ui-dropdown-body-open"] : ""
+            }`
           ].join(" ")}
         >
           {items.map((item, i) => (
             <div
               className={[
                 styles["elc_ui-dropdown-item"],
+                "elc_ui-dropdown-item",
                 item.props.value === selectedItem
                   ? styles["elc_ui-dropdown-item-selected"]
                   : ""
@@ -109,6 +114,7 @@ export default ({ ...props }) => {
               <span
                 className={[
                   `${styles["elc_ui-dropdown-item-dot"]}`,
+                  "elc_ui-dropdown-item-dot",
                   `${
                     item.props.value == selectedItem &&
                     styles["elc_ui-dropdown-item-dot-selected"]

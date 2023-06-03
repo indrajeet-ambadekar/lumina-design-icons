@@ -24,14 +24,17 @@ export const Tabs = ({ ...props }) => {
   };
   return (
     <div
-      className={[styles["elc_ui-tab-wrapper"], props.className || ""].join(
-        " "
-      )}
+      className={[
+        styles["elc_ui-tab-wrapper"],
+        props.className || "",
+        "elc_ui-tab-wrapper"
+      ].join(" ")}
       id={props.id || null}
     >
       <div
         className={[
           styles["elc_ui-tab-header"],
+          "elc_ui-tab-header",
           props.mode === "contained"
             ? styles["elc_ui-tab-header-contained"]
             : ""
@@ -48,7 +51,8 @@ export const Tabs = ({ ...props }) => {
                 ? props.mode === "contained"
                   ? styles["elc_ui-active-contained-tab-chip"]
                   : styles["elc_ui-active-tab-chip"]
-                : ""
+                : "",
+              "elc_ui-tab-chip"
             ].join(" ")}
             onClick={() => {
               _handleTabChipClick(i);
@@ -58,9 +62,11 @@ export const Tabs = ({ ...props }) => {
           </div>
         ))}
       </div>
-      <div className={[styles["elc_ui-tab-cntnr"]].join(" ")}>
+      <div
+        className={[styles["elc_ui-tab-cntnr"], "elc_ui-tab-cntnr"].join(" ")}
+      >
         <div
-          className={styles["elc_ui-tab"]}
+          className={`${styles["elc_ui-tab"]} elc_ui-tab`}
           id={tabs[activeTabIndex]?._id || null}
           dangerouslySetInnerHTML={{
             __html: tabs[activeTabIndex]?._subTree || ""

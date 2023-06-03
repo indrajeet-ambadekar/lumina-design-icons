@@ -30,7 +30,9 @@ export default ({ ...props }) => {
         <label htmlFor={`checkbox-${index}`}></label>
       </div>
       {props.label && (
-        <div className={`${styles["elc_ui-checkbox-label"]}`}>
+        <div
+          className={`${styles["elc_ui-checkbox-label"]} elc_ui-checkbox-label`}
+        >
           {props.label || ""}
         </div>
       )}

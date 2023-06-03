@@ -16,9 +16,17 @@ export default ({ ...props }) => {
       onClick={onClick}
       tabIndex={-1}
     >
-      {icon ? <span className={styles["elc_ui-flbtn-icon"]}>{icon}</span> : ""}
+      {icon ? (
+        <span className={`${styles["elc_ui-flbtn-icon"]} elc_ui-flbtn-icon`}>
+          {icon}
+        </span>
+      ) : (
+        ""
+      )}
       {children ? (
-        <div className={styles["elc_ui-flbtn-label"]}>{children}</div>
+        <div className={`${styles["elc_ui-flbtn-label"]} elc_ui-flbtn-label`}>
+          {children}
+        </div>
       ) : (
         ""
       )}

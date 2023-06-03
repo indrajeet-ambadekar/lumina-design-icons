@@ -30,7 +30,8 @@ export default ({ ...props }) => {
         props.mode === "dark"
           ? styles[`elc_ui-tag-${props.type.toLowerCase()}-dark`]
           : styles[`elc_ui-tag-${props.type.toLowerCase()}`],
-        props.className || ""
+        props.className || "",
+        "elc_ui-tag"
       ].join(" ")}
       style={props.style || {}}
     >

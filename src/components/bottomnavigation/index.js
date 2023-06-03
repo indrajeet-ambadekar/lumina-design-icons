@@ -24,7 +24,7 @@ export const BottomNavItem = ({ ...props }) => {
           ? styles["elc_ui-nav-center-item"]
           : styles["elc_ui-nav-item"],
         props.active ? styles["elc_ui-nav-item-active"] : "",
-
+        "elc_ui-nav-item",
         props.className || ""
       ].join(" ")}
       style={props.style || {}}
@@ -32,7 +32,11 @@ export const BottomNavItem = ({ ...props }) => {
       onClick={props.onClick}
     >
       {props.icon && (
-        <div className={styles["elc_ui-nav-item-icon"]}>{props.icon}</div>
+        <div
+          className={`${styles["elc_ui-nav-item-icon"]} elc_ui-nav-item-icon`}
+        >
+          {props.icon}
+        </div>
       )}
       {props.type !== "center" && <span>{props.children}</span>}
     </div>

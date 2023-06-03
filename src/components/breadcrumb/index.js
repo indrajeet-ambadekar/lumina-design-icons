@@ -28,10 +28,14 @@ export default ({ ...props }) => {
           ].join(" ")}
           onClick={crumb.onClick}
         >
-          <span className={styles["elc_ui-breadcrumb-label"]}>
+          <span
+            className={`${styles["elc_ui-breadcrumb-label"]} elc_ui-breadcrumb-label`}
+          >
             <span>{crumb.label}</span>
           </span>
-          <span className={styles["elc_ui-breadcrumb-chevron"]}>
+          <span
+            className={`${styles["elc_ui-breadcrumb-chevron"]} elc_ui-breadcrumb-chevron`}
+          >
             {i < crumbs.length - 1 ? (
               <i className='fas fa-chevron-right' />
             ) : (

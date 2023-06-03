@@ -35,10 +35,10 @@ export default ({ ...props }) => {
       <div
         className={
           openIcon && collapseIcon
-            ? `${styles["_acrdn-title-custom"]} ${
+            ? `${styles["_acrdn-title-custom"]} _acrdn-title-custom ${
                 isOpen ? styles["_acrdn-open"] : styles["_acrdn-closed"]
               }`
-            : `${styles["_acrdn-title"]} ${
+            : `${styles["_acrdn-title"]} _acrdn-title ${
                 isOpen ? styles["_acrdn-open"] : styles["_acrdn-closed"]
               }`
         }
@@ -48,7 +48,9 @@ export default ({ ...props }) => {
       >
         {title}
         {openIcon && collapseIcon && (
-          <div className={`${styles["accordion_collapse-controls"]}`}>
+          <div
+            className={`${styles["accordion_collapse-controls"]} accordion_collapse-controls`}
+          >
             {isOpen ? collapseIcon : openIcon}
           </div>
         )}
