@@ -14,7 +14,7 @@
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
-    "watch": "onchange 'src/**/*.**' 'example/**/*.**' './package.json' -- prettier --write {{changed}}",
+    "watch": "onchange 'src/**/*.**' 'example/**/*.**' './package.json' 'README.md' -- prettier --write {{changed}}",
     "prepare": "run-s build",
     "prebuild": "rimraf icon-src && rimraf icon-dist",
     "build-icons": "npm run prebuild && npm run svgr && rollup -c && npm run copy-icons-build",

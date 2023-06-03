@@ -13,14 +13,18 @@ npm install --save elysium-cloud-ui react-date-picker
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-import MyComponent from 'elysium-cloud-ui'
-import 'elysium-cloud-ui/dist/index.css'
+import { UiProvidor } from "elysium-cloud-ui";
+import "elysium-cloud-ui/dist/index.css";
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return (
+      <UiProvidor>
+        <MyComponent />
+      </UiProvidor>
+    );
   }
 }
 ```
