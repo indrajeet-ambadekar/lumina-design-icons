@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save elysium-cloud-ui
+npm install --save elysium-cloud-ui react-date-picker
 ```
 
 ## Usage
