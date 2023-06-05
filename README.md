@@ -12,6 +12,8 @@ npm install --save elysium-cloud-ui react-date-picker
 
 ## Usage
 
+Wrap you react application inside the `UiProvidor` HOC to start using elysium cloud ui library
+
 ```jsx
 import React, { Component } from "react";
 

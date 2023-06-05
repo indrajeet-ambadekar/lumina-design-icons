@@ -68,10 +68,9 @@ export const Tabs = ({ ...props }) => {
         <div
           className={`${styles["elc_ui-tab"]} elc_ui-tab`}
           id={tabs[activeTabIndex]?._id || null}
-          dangerouslySetInnerHTML={{
-            __html: tabs[activeTabIndex]?._subTree || ""
-          }}
-        ></div>
+        >
+          {tabs[activeTabIndex]?._subTree || ""}
+        </div>
       </div>
     </div>
   );

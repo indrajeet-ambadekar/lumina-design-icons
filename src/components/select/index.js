@@ -93,9 +93,8 @@ export default ({ ...props }) => {
         <div
           className={[
             `${styles["elc_ui-dropdown-body"]}`,
-            "elc_ui-dropdown-body"`${
-              isOpen ? styles["elc_ui-dropdown-body-open"] : ""
-            }`
+            "elc_ui-dropdown-body",
+            `${isOpen ? styles["elc_ui-dropdown-body-open"] : ""}`
           ].join(" ")}
         >
           {items.map((item, i) => (
