@@ -1,6 +1,6 @@
 {
   "name": "elysium-cloud-ui",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Made with create-react-library",
   "author": "indrajeet-ambadekar",
   "license": "MIT",
@@ -12,7 +12,7 @@
     "node": ">=10"
   },
   "scripts": {
-    "build": "microbundle-crl --no-compress --format modern,cjs",
+    "build": "microbundle-crl --no-compress --format modern,cjs --globals react-date-picker",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
     "watch": "onchange 'src/**/*.**' 'example/**/*.**' './package.json' 'README.md' -- prettier --write {{changed}}",
     "prepare": "run-s build",
