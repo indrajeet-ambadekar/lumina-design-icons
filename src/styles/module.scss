@@ -3,7 +3,7 @@
 }
 
 $red-carnelian: rgba(196, 49, 33, 0.75);
-$red-pigment: rgba(234, 97, 83, 1);
+$elysium-orange: rgba(234, 97, 83, 1);
 $blue-persian: #005e9e;
 $white: #ffffff;
 $gray-isabelline: #f2f0f0;
@@ -383,7 +383,7 @@ $button-seconday: #f9f9f9;
   display: block;
   width: 40px;
   margin: 5px;
-  background: $red-pigment;
+  background: $elysium-orange;
   position: absolute;
   top: 2px;
   bottom: 2px;
@@ -419,7 +419,7 @@ $button-seconday: #f9f9f9;
     text-transform: uppercase;
     padding-left: 10px;
     background-color: $white;
-    color: $red-pigment;
+    color: $elysium-orange;
     font-weight: 800;
   }
 }
@@ -436,7 +436,7 @@ $button-seconday: #f9f9f9;
   text-transform: uppercase;
   padding-right: 10px;
   background-color: $white;
-  color: $red-pigment;
+  color: $elysium-orange;
   text-align: right;
 }
 
@@ -1023,8 +1023,8 @@ $one-grid: calc(100% / 12);
     visibility: hidden;
   }
   input[type="checkbox"]:checked + label {
-    background-color: $red-pigment;
-    border-color: $red-pigment;
+    background-color: $elysium-orange;
+    border-color: $elysium-orange;
   }
   input[type="checkbox"]:checked + label:after {
     opacity: 1;
@@ -1091,14 +1091,14 @@ $one-grid: calc(100% / 12);
 // ######################## LINK STYLES ##############################
 
 a.elc_ui-link {
-  color: $red-pigment;
+  color: $elysium-orange;
   text-decoration: none;
   border-bottom: 2px solid transparent;
   padding: 3px 0;
   &:hover,
   &:active,
   &:focus {
-    border-bottom: 2px solid $red-pigment;
+    border-bottom: 2px solid $elysium-orange;
   }
   @include Montserrat;
   font-size: inherit;
@@ -1437,8 +1437,8 @@ a.elc_ui-link-disabled {
     position: absolute;
     width: 14px;
     height: 14px;
-    background-color: $red-pigment;
-    border: 2px solid $red-pigment;
+    background-color: $elysium-orange;
+    border: 2px solid $elysium-orange;
     border-radius: 50%;
     top: 50%;
     left: -5px;
@@ -1447,7 +1447,7 @@ a.elc_ui-link-disabled {
   }
 
   input[type="radio"]:checked + label::before {
-    border-color: $red-pigment;
+    border-color: $elysium-orange;
   }
 
   input[type="radio"]:checked + label::after {
@@ -1514,7 +1514,7 @@ a.elc_ui-link-disabled {
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 0.32px;
-    color: $red-pigment;
+    color: $elysium-orange;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -1564,8 +1564,8 @@ a.elc_ui-link-disabled {
 .elc_ui-chip-white {
   background-color: $white;
 }
-.elc_ui-chip-red {
-  background-color: $red-pigment;
+.elc_ui-chip-orange {
+  background-color: $elysium-orange;
   * {
     color: $white;
   }
@@ -1608,7 +1608,7 @@ a.elc_ui-link-disabled {
   font-size: 14px;
 }
 .elc_ui-flbtn-orange {
-  background-color: $red-pigment;
+  background-color: $elysium-orange;
   * {
     color: $white;
     font-family: "Montserrat";
@@ -1664,7 +1664,7 @@ a.elc_ui-link-disabled {
 }
 
 .circle-progress {
-  stroke: $red-pigment;
+  stroke: $elysium-orange;
   stroke-linecap: round;
   stroke-linejoin: round;
   transition: all 0.8s ease-in 0s;
@@ -1680,7 +1680,7 @@ a.elc_ui-link-disabled {
   @include Montserrat;
   font-size: 12px;
   font-weight: 500;
-  fill: $red-pigment;
+  fill: $elysium-orange;
 }
 .circle-text-complete {
   @include Montserrat;
@@ -1720,7 +1720,7 @@ a.elc_ui-link-disabled {
 }
 .elc_ui-prgs-lnr-fill {
   border-radius: 22px;
-  background-color: $red-pigment;
+  background-color: $elysium-orange;
   transition: width 0.8s ease-in 0s;
 }
 .elc_ui-prgs-lnr-fill-complete {
@@ -1740,7 +1740,7 @@ a.elc_ui-link-disabled {
 }
 .elc_ui-progress-status-red {
   i {
-    color: $red-pigment;
+    color: $elysium-orange;
     font-size: 20px;
   }
 }
@@ -1777,7 +1777,7 @@ a.elc_ui-link-disabled {
 
 .elc_ui-range-slider::-webkit-slider-thumb {
   -webkit-appearance: none !important;
-  background-color: $red-pigment;
+  background-color: $elysium-orange;
   border: 1px solid $red-carnelian;
   height: 24px;
   width: 24px;
@@ -1862,9 +1862,9 @@ a.elc_ui-link-disabled {
   background-color: $gray-isabelline;
 }
 .elc_ui-active-tab-chip {
-  border-bottom: 3px solid $red-pigment;
+  border-bottom: 3px solid $elysium-orange;
   * {
-    color: $red-pigment;
+    color: $elysium-orange;
   }
   flex: none;
   order: 0;
@@ -1873,9 +1873,9 @@ a.elc_ui-link-disabled {
   font-weight: 700;
 }
 .elc_ui-active-contained-tab-chip {
-  border: 1px solid $red-pigment;
+  border: 1px solid $elysium-orange;
   * {
-    color: $red-pigment;
+    color: $elysium-orange;
   }
   flex: none;
   order: 0;
@@ -1941,11 +1941,11 @@ a.elc_ui-link-disabled {
 }
 .elc_ui-tag-error {
   background-color: #ffe5e5;
-  color: $red-pigment;
+  color: $elysium-orange;
 }
 .elc_ui-tag-error-dark {
   color: #fff;
-  background-color: $red-pigment;
+  background-color: $elysium-orange;
 }
 .elc_ui-tag-warn,
 .elc_ui-tag-pending {
@@ -2076,10 +2076,10 @@ a.elc_ui-link-disabled {
       width: 48%;
       &:first-child {
         background-color: #fff;
-        color: $red-pigment;
+        color: $elysium-orange;
       }
       &:last-child {
-        background-color: $red-pigment;
+        background-color: $elysium-orange;
         color: #fff;
         margin-left: 10px;
       }
@@ -2121,11 +2121,11 @@ a.elc_ui-link-disabled {
   border-bottom: 3px solid transparent;
 }
 .elc_ui-nav-item-active {
-  border-bottom-color: $red-pigment;
+  border-bottom-color: $elysium-orange;
   font-weight: 800;
   i,
   span {
-    color: $red-pigment;
+    color: $elysium-orange;
   }
 }
 .elc_ui-nav-item-icon {
@@ -2147,7 +2147,7 @@ a.elc_ui-link-disabled {
   position: absolute;
   width: 50px;
   height: 50px;
-  background-color: $red-pigment;
+  background-color: $elysium-orange;
   border: 4px solid transparent;
   @include vertical-center();
   text-align: center;
@@ -2339,7 +2339,7 @@ a.elc_ui-link-disabled {
   color: $black-raisin;
 }
 .elc_ui-tab-select-option-selected {
-  background-color: $red-pigment;
+  background-color: $elysium-orange;
   color: $white;
   svg {
     path {
