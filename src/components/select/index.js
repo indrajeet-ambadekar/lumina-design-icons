@@ -2,9 +2,12 @@ import React, { useEffect, useState } from "react";
 import styles from "../../styles/module.scss";
 import { isType } from "../../utils";
 export default ({ ...props }) => {
-  const { name, className, id, onChange, label, children, value } = props;
+  let { name, className, id, onChange, label, children, value } = props;
   if (props === undefined) {
     return false;
+  }
+  if (isType("Object", children)) {
+    children = [children];
   }
   if (!isType("Array", children)) {
     throw new Error(

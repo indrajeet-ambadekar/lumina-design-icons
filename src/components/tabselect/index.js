@@ -8,10 +8,10 @@ export default ({ ...props }) => {
     );
   }
   const [activeValue, setActiveValue] = useState(
-    props.options.find((x) => x.value === props.value).value
+    props.options.find((x) => x.value === props.value)?.value
   );
   useEffect(() => {
-    setActiveValue(props.options.find((x) => x.value === props.value).value);
+    setActiveValue(props.options.find((x) => x.value === props.value)?.value);
   }, [props.value]);
   return (
     <div
