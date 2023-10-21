@@ -1,6 +1,12 @@
 import React from "react";
 import { useEffect, useRef } from "react";
 import styles from "../../styles/module.scss";
+import {
+  IconExclamationTriangle,
+  IconLightbulbAlt,
+  IconThumbsDownAlt,
+  IconThumbsUpAlt
+} from "../icons/icon-lib";
 const useTimeout = (callback, delay) => {
   const savedCallback = useRef(callback);
 
@@ -19,7 +25,13 @@ const useTimeout = (callback, delay) => {
     return () => clearTimeout(id);
   }, [delay]);
 };
-
+const toastTypeMap = {
+  default: null,
+  success: <IconThumbsUpAlt />,
+  error: <IconExclamationTriangle />,
+  warn: <IconExclamationTriangle />,
+  info: <IconLightbulbAlt />
+};
 export const Toast = (props) => {
   useTimeout(props.close, props.timer || 5000);
 
@@ -30,7 +42,9 @@ export const Toast = (props) => {
         styles[`elc_ui-toast-${props.type || "default"}`],
         "elc_ui-toast"
       ].join(" ")}
+      title={props.children}
     >
+      {toastTypeMap[props.type || "default"]}
       <div
         className={[styles["elc_ui-toast__text"], "elc_ui-toast__text"].join(
           " "

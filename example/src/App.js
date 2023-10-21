@@ -60,7 +60,7 @@ const App = () => {
   const [fruitName, setFruitName] = useState("");
   const _renderIcon = (icon) => {
     return React.createElement(ElysiumCloudIcons[icon], {
-      style: { fontSize: 22, margin: `10px` }
+      style: { fontSize: 50, margin: `10px` }
     });
   };
   return (
@@ -1188,7 +1188,7 @@ toast.warn("MESSAGE",time_in_milliseconds)
             onClick={() => {
               toast.success(
                 "TESTING TESTING TESTING TESTING TESTING TESTING",
-                4000
+                4000000
               );
             }}
           >
@@ -1202,7 +1202,7 @@ toast.warn("MESSAGE",time_in_milliseconds)
             onClick={() => {
               toast.error(
                 "TESTING TESTING TESTING TESTING TESTING TESTING",
-                4000
+                4000000
               );
             }}
           >
@@ -1225,7 +1225,7 @@ toast.warn("MESSAGE",time_in_milliseconds)
             onClick={() => {
               toast.warn(
                 "TESTING TESTING TESTING TESTING TESTING TESTING",
-                4000
+                4000000
               );
             }}
           >
@@ -1320,8 +1320,9 @@ toast.warn("MESSAGE",time_in_milliseconds)
           <Text type='h2'>Icon Component</Text>
           <div className='icon-cntnr'>
             {Object.keys(ElysiumCloudIcons).map((icon, i) => (
-              <Column md={1} key={i}>
+              <Column md={2} key={i}>
                 <span title={icon}>{_renderIcon(icon)}</span>
+                <Text type='b2'>{icon}</Text>
               </Column>
             ))}
           </div>

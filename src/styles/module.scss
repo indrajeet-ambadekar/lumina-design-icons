@@ -1254,15 +1254,6 @@ a.elc_ui-link-disabled {
   }
 }
 
-// ######################## TOAST STYLES ##############################
-
-.elc_ui-toast {
-  * {
-    font-size: inherit;
-    color: inherit;
-  }
-}
-
 // ######################## TOGGLE INPUT STYLES ##############################
 
 .elc_ui-toggle-input {
@@ -2180,59 +2171,78 @@ a.elc_ui-link-disabled {
 }
 
 .elc_ui-toast {
-  border: 2px solid transparent;
+  border: 1px solid #ccc;
   background-color: #fafafa;
-  border-radius: 4px;
-  -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.52);
-  -moz-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.52);
-  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.52);
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.22);
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.22);
   margin-top: 16px;
   display: flex;
-
+  font-size: 12px;
+  * {
+    font-size: 12px;
+  }
+  padding: 0 0 0 1rem;
   position: relative;
   cursor: pointer;
-  transition: all 1s ease-in 0s;
-  max-width: 30vw;
+  transition: all 1s ease-in 1s;
+  max-width: 20vw;
+  width: fit-content;
   @include vertical-center-left();
   justify-content: space-between;
   flex-grow: 1;
+  animation: toastFadeInAnimation ease 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.elc_ui-toast svg {
+  width: 30px;
+  height: 30px;
+  path {
+    fill: #fff;
+  }
 }
 .elc_ui-toast-default {
   background-color: #fafafa;
-  border: 2px solid transparent;
+  border: 1px solid #ccc;
 }
 .elc_ui-toast-success {
-  background-color: #0c9000;
-  border: 2px solid transparent;
+  background-color: #3fc133;
+  border: 1px solid #ccc;
   * {
     color: #fff;
   }
 }
 .elc_ui-toast-error {
-  background-color: #ed1c24;
-  border: 2px solid transparent;
+  background-color: #f7464c;
+  border: 1px solid #ccc;
   * {
     color: #fff;
   }
 }
 .elc_ui-toast-info {
-  background-color: #73cff1;
-  border: 2px solid transparent;
+  background-color: #72d6fa;
+  border: 1px solid #ccc;
 }
 
 .elc_ui-toast-warn {
   background-color: #f1c411;
-  border: 2px solid transparent;
+  border: 1px solid #ccc;
   * {
     color: #fff;
   }
 }
 
 .elc_ui-toast__text {
-  padding: 0.7rem 2rem;
+  padding: 0.7rem 12px;
   line-height: 1.4;
   font-weight: 500;
   @include Montserrat;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .elc_ui-toast__close-btn {
@@ -2241,6 +2251,14 @@ a.elc_ui-link-disabled {
   font-size: 16px;
   margin-right: 8px;
   cursor: pointer;
+}
+@keyframes toastFadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 // ######################## MENU DROPDOWN STYLES ##############################
