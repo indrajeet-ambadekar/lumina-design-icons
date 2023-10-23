@@ -118,6 +118,7 @@ const App = () => {
           </pre>
           <AppHeader
             className='app-header'
+            logo='https://s3.amazonaws.com/static.elysium-cloud.com/images/logo.png'
             companyIcon={true}
             secondaryIcon={null}
             onIconClick={() => {
