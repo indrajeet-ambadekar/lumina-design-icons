@@ -1,6 +1,6 @@
 {
   "name": "elysium-cloud-ui",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "A lightweight UI library built for React applications",
   "main": "index.js",
   "scripts": {

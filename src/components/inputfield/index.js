@@ -25,7 +25,7 @@ export default ({ ...props }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inputLabel]);
 
-  const _handleOnFocus = (event) => {
+  const _handleOnFocus = function (event) {
     setFocused(true);
     if (typeof props.onFocus === "function") {
       props.onFocus(event);
@@ -46,7 +46,9 @@ export default ({ ...props }) => {
     );
 
     setTimeout(() => {
-      inputEl.current.setSelectionRange(newPosition, newPosition);
+      if (event.target.type !== "email") {
+        inputEl.current.setSelectionRange(newPosition, newPosition);
+      }
     }, 0);
   }
   return (
@@ -82,7 +84,7 @@ export default ({ ...props }) => {
         type={
           ["text", "password", "email", "mobile"].includes(type) ? type : "text"
         }
-        value={value}
+        defaultValue={value}
         data-testid={testId}
         onChange={_handleOnChange}
         placeholder={placeholder || ""}

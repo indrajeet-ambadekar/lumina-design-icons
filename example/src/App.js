@@ -659,7 +659,7 @@ type--> 'text','number','mobile'
 `}
           </pre>
           <InputField
-            type='text'
+            type='email'
             value={textValue}
             onChange={(val) => setTextValue(val)}
             className='text-field'
