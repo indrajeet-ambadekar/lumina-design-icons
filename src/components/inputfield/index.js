@@ -84,7 +84,7 @@ export default ({ ...props }) => {
         type={
           ["text", "password", "email", "mobile"].includes(type) ? type : "text"
         }
-        defaultValue={value}
+        value={value}
         data-testid={testId}
         onChange={_handleOnChange}
         placeholder={placeholder || ""}
