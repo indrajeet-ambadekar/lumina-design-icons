@@ -53,15 +53,17 @@ export default ({ ...props }) => {
             <i className={`fas ${menuOpen ? "fa-times" : "fa-bars"}`} />
           </button>
         )}
-        <img
-          src={props.logo ? props.logo : LogoBase64} //'https://s3.amazonaws.com/static.elysium-cloud.com/images/logo.png'
-          alt='Elysium Cloud'
-          className={[
-            styles["elc_ui-header-app-logo-img"],
-            "elc_ui-header-app-logo-img"
-          ].join(" ")}
-          onClick={_handleLogoClick}
-        />
+        {props.logo && (
+          <img
+            src={props.logo ? props.logo : LogoBase64} //'https://s3.amazonaws.com/static.elysium-cloud.com/images/logo.png'
+            alt='Elysium Cloud'
+            className={[
+              styles["elc_ui-header-app-logo-img"],
+              "elc_ui-header-app-logo-img"
+            ].join(" ")}
+            onClick={_handleLogoClick}
+          />
+        )}
         {props.secondaryIcon}
       </div>
       <div
