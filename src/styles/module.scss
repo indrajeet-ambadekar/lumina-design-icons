@@ -1054,7 +1054,7 @@ $one-grid: calc(100% / 12);
 
 .elc_ui-header-wrapper {
   width: 100%;
-  height: 70px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1072,6 +1072,16 @@ $one-grid: calc(100% / 12);
   height: 30px;
   margin-right: 10px;
   max-width: 100px;
+}
+.elc_ui-header-app-logo-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  height: 60px;
+}
+.elc_ui-header-app-logo-wrapper img {
+  height: 30px;
 }
 .elc_ui-header-profile-wrapper {
   width: 20%;
