@@ -663,6 +663,7 @@ type--> 'text','number','mobile'
             value={textValue}
             onChange={(val) => setTextValue(val)}
             className='text-field'
+            textStyle='uppercase'
             label='Full Name'
             onBlur={(event) => {
               console.log("ON BLUR EVENT", event?.target?.value);

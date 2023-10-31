@@ -37,19 +37,18 @@ export default ({ ...props }) => {
       props.onBlur(event);
     }
   };
-  function _handleOnChange(event) {
-    const { value, selectionEnd } = event.target;
-    const rightCharsCount = value.length - selectionEnd;
-    const newPosition = value.length - rightCharsCount;
-    setValue(
-      processByType(event.target.value, type || "text", textStyle || null)
-    );
+  function _handleOnChange(value) {
+    // const { value, selectionEnd } = event.target;
+    // const rightCharsCount = value.length - selectionEnd;
+    // const newPosition = value.length - rightCharsCount;
+    setValue(processByType(value, type || "text", textStyle || null));
 
-    setTimeout(() => {
-      if (event.target.type !== "email") {
-        inputEl.current.setSelectionRange(newPosition, newPosition);
-      }
-    }, 0);
+    // setTimeout(() => {
+    //   if (type !== "email") {
+    //     inputEl.current.setSelectionRange(newPosition, newPosition);
+    //   }
+    // }, 0);
+    props.onChange(value);
   }
   return (
     <div
@@ -86,7 +85,7 @@ export default ({ ...props }) => {
         }
         value={value}
         data-testid={testId}
-        onChange={_handleOnChange}
+        onChange={(e) => _handleOnChange(e.target.value)}
         placeholder={placeholder || ""}
         className={styles["elc_ui-input-field"]}
         name={name || label}
@@ -117,7 +116,7 @@ const processByType = (str, type, textCase) => {
   if (type === "number" || type === "mobile") {
     str = str.replace(/[^0-9\.]+/g, "");
   }
-  if (type === "text") {
+  if (type === "text" || type === "email") {
     switch (textCase) {
       case "uppercase":
         str = str.toUpperCase();

@@ -12,7 +12,10 @@ export default ({ ...props }) => {
   useEffect(() => {
     const pageClickEvent = (e) => {
       // If the active element exists and is clicked outside of
-      toggleMenu(!menuOpen);
+      //
+      if (!e.target.closest(".elc_ui-header-hamburger-btn")) {
+        toggleMenu(!menuOpen);
+      }
     };
     if (menuOpen) {
       window.addEventListener("click", pageClickEvent);
