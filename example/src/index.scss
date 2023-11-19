@@ -54,5 +54,13 @@ iframe {
       align-items: center;
       justify-content: center;
     }
+    &.custom {
+      width: 100%;
+      height: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to left, #3182d5, #4e54c8);
+    }
   }
 }

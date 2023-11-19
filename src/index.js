@@ -15,6 +15,7 @@ import DatePicker from "./components/datepicker";
 import Dialog from "./components/dialog";
 import FlatIcon from "./components/icons";
 import FloatingButton from "./components/floatingbutton";
+import FloatingMenu from "./components/floatingmenu";
 import InputField from "./components/inputfield";
 import Link from "./components/link";
 import { MenuDropdown, MenuItem } from "./components/menudropdown";
@@ -60,6 +61,7 @@ export {
   Dialog,
   FlatIcon,
   FloatingButton,
+  FloatingMenu,
   InputField,
   Link,
   MenuDropdown,
