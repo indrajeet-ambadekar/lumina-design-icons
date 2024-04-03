@@ -15,7 +15,7 @@ const SvgCoffee = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M18 8h1a4 4 0 1 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8ZM14 1v3M10 1v3M6 1v3'
+      d='M18 8h1a4 4 0 1 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4zM14 1v3M10 1v3M6 1v3'
     />
   </svg>
 );

@@ -17,7 +17,7 @@ const SvgCameraOff = ({ title, titleId, ...props }) => (
       strokeWidth={2}
       clipPath='url(#camera-off_svg__a)'
     >
-      <path d='m1 1 22 22M9 3h6l2 3h4a2 2 0 0 1 2 2v9.34m-7.72-2.06a4 4 0 1 1-5.56-5.56M21 21H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3l15 15Z' />
+      <path d='m1 1 22 22M9 3h6l2 3h4a2 2 0 0 1 2 2v9.34m-7.72-2.06a4 4 0 1 1-5.56-5.56M21 21H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3z' />
     </g>
     <defs>
       <clipPath id='camera-off_svg__a'>

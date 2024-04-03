@@ -15,7 +15,7 @@ const SvgSave = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2Z'
+      d='M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2'
     />
     <path
       stroke='#000'

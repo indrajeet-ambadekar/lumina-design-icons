@@ -15,7 +15,7 @@ const SvgTv = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M20 7H4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2ZM17 2l-5 5-5-5'
+      d='M20 7H4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2M17 2l-5 5-5-5'
     />
   </svg>
 );

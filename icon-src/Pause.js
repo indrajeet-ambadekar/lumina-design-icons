@@ -15,7 +15,7 @@ const SvgPause = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M18 4h-4v16h4V4ZM10 4H6v16h4V4Z'
+      d='M18 4h-4v16h4zM10 4H6v16h4z'
     />
   </svg>
 );

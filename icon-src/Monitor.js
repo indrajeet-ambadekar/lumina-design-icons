@@ -15,7 +15,7 @@ const SvgMonitor = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M8 21h8M12 17v4M20 3H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z'
+      d='M8 21h8M12 17v4M20 3H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2'
     />
   </svg>
 );

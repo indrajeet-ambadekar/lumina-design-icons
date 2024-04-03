@@ -15,7 +15,7 @@ const SvgCrosshair = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10ZM12 22v-4M22 12h-4M6 12H2M12 6V2'
+      d='M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10M12 22v-4M22 12h-4M6 12H2M12 6V2'
     />
   </svg>
 );

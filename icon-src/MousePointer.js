@@ -15,7 +15,7 @@ const SvgMousePointer = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='m3 3 7.07 16.97 2.51-7.39 7.39-2.51L3 3ZM13 13l6 6'
+      d='m3 3 7.07 16.97 2.51-7.39 7.39-2.51zM13 13l6 6'
     />
   </svg>
 );

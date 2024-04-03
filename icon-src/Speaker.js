@@ -15,14 +15,14 @@ const SvgSpeaker = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M18 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2Z'
+      d='M18 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2'
     />
     <path
       stroke='#000'
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M12 18a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM12 6h.01'
+      d='M12 18a4 4 0 1 0 0-8 4 4 0 0 0 0 8M12 6h.01'
     />
   </svg>
 );

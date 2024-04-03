@@ -15,7 +15,7 @@ const SvgRewind = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='m22 19-9-7 9-7v14ZM11 19l-9-7 9-7v14Z'
+      d='m22 19-9-7 9-7zM11 19l-9-7 9-7z'
     />
   </svg>
 );

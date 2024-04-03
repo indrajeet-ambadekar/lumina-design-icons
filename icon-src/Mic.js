@@ -15,7 +15,7 @@ const SvgMic = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M8 23h8M12 19v4M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3v0Z'
+      d='M8 23h8M12 19v4M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3'
     />
     <path
       stroke='#000'

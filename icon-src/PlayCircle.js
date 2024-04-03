@@ -15,14 +15,14 @@ const SvgPlayCircle = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z'
+      d='M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10'
     />
     <path
       stroke='#000'
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='m10 8 6 4-6 4V8Z'
+      d='m10 8 6 4-6 4z'
     />
   </svg>
 );

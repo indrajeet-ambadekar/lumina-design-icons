@@ -15,7 +15,7 @@ const SvgArchive = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M21 8v13H3V8M10 12h4M23 3H1v5h22V3Z'
+      d='M21 8v13H3V8M10 12h4M23 3H1v5h22z'
     />
   </svg>
 );

@@ -15,7 +15,7 @@ const SvgPercent = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M19 5 5 19M17.5 20a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5ZM6.5 9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z'
+      d='M19 5 5 19M17.5 20a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5M6.5 9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5'
     />
   </svg>
 );

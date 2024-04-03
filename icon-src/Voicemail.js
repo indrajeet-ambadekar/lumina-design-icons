@@ -15,7 +15,7 @@ const SvgVoicemail = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M5.5 16h13M18.5 16a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM5.5 16a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Z'
+      d='M5.5 16h13M18.5 16a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9M5.5 16a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9'
     />
   </svg>
 );

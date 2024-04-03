@@ -15,14 +15,14 @@ const SvgMapPin = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0Z'
+      d='M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0'
     />
     <path
       stroke='#000'
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z'
+      d='M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6'
     />
   </svg>
 );

@@ -15,7 +15,7 @@ const SvgGrid = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M21 14h-7v7h7v-7ZM10 14H3v7h7v-7ZM21 3h-7v7h7V3ZM10 3H3v7h7V3Z'
+      d='M21 14h-7v7h7zM10 14H3v7h7zM21 3h-7v7h7zM10 3H3v7h7z'
     />
   </svg>
 );

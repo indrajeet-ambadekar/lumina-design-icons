@@ -15,7 +15,7 @@ const SvgMap = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4ZM16 6v16M8 2v16'
+      d='M1 6v16l7-4 8 4 7-4V2l-7 4-8-4zM16 6v16M8 2v16'
     />
   </svg>
 );

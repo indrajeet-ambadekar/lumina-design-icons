@@ -15,7 +15,7 @@ const SvgSend = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M22 2 11 13M22 2l-7 20-4-9-9-4 20-7Z'
+      d='M22 2 11 13M22 2l-7 20-4-9-9-4z'
     />
   </svg>
 );

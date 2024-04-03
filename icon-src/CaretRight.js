@@ -12,7 +12,7 @@ const SvgCaretRight = ({ title, titleId, ...props }) => (
     {title ? <title id={titleId}>{title}</title> : null}
     <path
       fill='#000'
-      d='m19.5 11.13-14-8.08a1 1 0 0 0-1.5.87v16.16a1 1 0 0 0 1.5.87l14-8.08a1 1 0 0 0 0-1.74ZM6 18.35V5.65L17 12 6 18.35Z'
+      d='m19.5 11.13-14-8.08a1 1 0 0 0-1.5.87v16.16a1 1 0 0 0 1.5.87l14-8.08a1 1 0 0 0 0-1.74M6 18.35V5.65L17 12z'
     />
   </svg>
 );

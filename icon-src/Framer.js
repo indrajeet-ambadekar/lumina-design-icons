@@ -15,7 +15,7 @@ const SvgFramer = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M5 16h7m-7 0V9h14V2H5l14 14H5Zm0 0 7 7v-7H5Z'
+      d='M5 16h7m-7 0V9h14V2H5l14 14H5m0 0 7 7v-7z'
     />
   </svg>
 );

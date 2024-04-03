@@ -12,7 +12,7 @@ const SvgCompress = ({ title, titleId, ...props }) => (
     {title ? <title id={titleId}>{title}</title> : null}
     <path
       fill='#000'
-      d='M16 9h5a1 1 0 1 0 0-2h-4V3a1 1 0 0 0-2 0v5a1 1 0 0 0 1 1Zm-8 6H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0v-5a1 1 0 0 0-1-1ZM8 2a1 1 0 0 0-1 1v4H3a1 1 0 0 0 0 2h5a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1Zm13 13h-5a1 1 0 0 0-1 1v5a1 1 0 0 0 2 0v-4h4a1 1 0 0 0 0-2Z'
+      d='M16 9h5a1 1 0 1 0 0-2h-4V3a1 1 0 0 0-2 0v5a1 1 0 0 0 1 1m-8 6H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0v-5a1 1 0 0 0-1-1M8 2a1 1 0 0 0-1 1v4H3a1 1 0 0 0 0 2h5a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1m13 13h-5a1 1 0 0 0-1 1v5a1 1 0 0 0 2 0v-4h4a1 1 0 0 0 0-2'
     />
   </svg>
 );

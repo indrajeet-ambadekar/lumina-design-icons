@@ -15,7 +15,7 @@ const SvgGitCommit = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M17.01 12h5.95M1.05 12H7M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z'
+      d='M17.01 12h5.95M1.05 12H7M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8'
     />
   </svg>
 );

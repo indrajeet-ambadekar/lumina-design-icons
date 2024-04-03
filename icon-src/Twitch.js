@@ -15,7 +15,7 @@ const SvgTwitch = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M16 11V7m5-5H3v16h5v4l4-4h5l4-4V2Zm-10 9V7v4Z'
+      d='M16 11V7m5-5H3v16h5v4l4-4h5l4-4zm-10 9V7z'
     />
   </svg>
 );

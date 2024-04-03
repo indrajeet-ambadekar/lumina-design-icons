@@ -15,7 +15,7 @@ const SvgDroplet = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='m12 2.69 5.66 5.66a8 8 0 1 1-11.31 0L12 2.69Z'
+      d='m12 2.69 5.66 5.66a8 8 0 1 1-11.31 0z'
     />
   </svg>
 );

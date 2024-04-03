@@ -15,7 +15,7 @@ const SvgSkipForward = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M19 5v14M5 4l10 8-10 8V4Z'
+      d='M19 5v14M5 4l10 8-10 8z'
     />
   </svg>
 );

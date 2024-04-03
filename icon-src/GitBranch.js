@@ -15,14 +15,14 @@ const SvgGitBranch = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M6 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z'
+      d='M6 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6'
     />
     <path
       stroke='#000'
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M18 9a9 9 0 0 1-9 9M18 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM6 3v12'
+      d='M18 9a9 9 0 0 1-9 9M18 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6M6 3v12'
     />
   </svg>
 );

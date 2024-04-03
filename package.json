@@ -1,6 +1,6 @@
 {
   "name": "lumina-design-icons",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Made with create-react-library",
   "author": "indrajeet-ambadekar",
   "license": "MIT",
@@ -15,7 +15,7 @@
     "build": "npm run build-icons && rollup -c rollup.config.js && microbundle-crl --no-compress --format modern,cjs && npm run minify-index && npm run uglify-index",
     "minify-index": "terser dist/index.js --compress --mangle --output dist/index.js",
     "uglify-index": "uglifyjs dist/index.js --compress --mangle --output dist/index.js",
-    "start": "npm run build-icons && microbundle-crl watch --no-compress --format modern,cjs",
+    "start": "npm run build-icons && microbundle-crl watch --no-compress --format modern,cjs && npm run minify-index && npm run uglify-index",
     "watch": "onchange 'src/**/*.**' 'example/**/*.**' './package.json' 'README.md' -- prettier --write {{changed}}",
     "prepare": "run-s build",
     "prebuild": "rimraf dist && rimraf icon-src && rimraf icon-dist",
@@ -29,7 +29,8 @@
     "custom-svgr": "rm -rf custom-icon-src/* && svgr --icon --title-prop --replace-attr-values '#292929bf=currentColor' -d custom-icon-src -- custom-icon-svg"
   },
   "peerDependencies": {
-    "react": "^18.0.2"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@babel/plugin-proposal-unicode-property-regex": "^7.18.6",

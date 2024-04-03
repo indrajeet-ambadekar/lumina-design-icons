@@ -22,7 +22,7 @@ const SvgAirplay = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='m12 15 5 6H7l5-6Z'
+      d='m12 15 5 6H7z'
     />
   </svg>
 );

@@ -15,7 +15,7 @@ const SvgVolume = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M11 5 6 9H2v6h4l5 4V5Z'
+      d='M11 5 6 9H2v6h4l5 4z'
     />
   </svg>
 );

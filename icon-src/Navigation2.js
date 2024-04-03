@@ -15,7 +15,7 @@ const SvgNavigation2 = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='m12 2 7 19-7-4-7 4 7-19Z'
+      d='m12 2 7 19-7-4-7 4z'
     />
   </svg>
 );

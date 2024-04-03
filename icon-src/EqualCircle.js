@@ -12,7 +12,7 @@ const SvgEqualCircle = ({ title, titleId, ...props }) => (
     {title ? <title id={titleId}>{title}</title> : null}
     <path
       fill='#000'
-      d='M15 13H9a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2Zm0-4H9a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2Zm-3-7a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18a8 8 0 1 1 0-16.001A8 8 0 0 1 12 20Z'
+      d='M15 13H9a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2m0-4H9a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2m-3-7a10 10 0 1 0 0 20 10 10 0 0 0 0-20m0 18a8 8 0 1 1 0-16.001A8 8 0 0 1 12 20'
     />
   </svg>
 );

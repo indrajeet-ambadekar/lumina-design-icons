@@ -15,7 +15,7 @@ const SvgFastForward = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='m13 19 9-7-9-7v14ZM2 19l9-7-9-7v14Z'
+      d='m13 19 9-7-9-7zM2 19l9-7-9-7z'
     />
   </svg>
 );

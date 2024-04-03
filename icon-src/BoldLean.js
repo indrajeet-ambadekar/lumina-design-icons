@@ -15,7 +15,7 @@ const SvgBoldLean = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M6 12h9a4 4 0 1 1 0 8H6v-8ZM6 4h8a4 4 0 1 1 0 8H6V4Z'
+      d='M6 12h9a4 4 0 1 1 0 8H6zM6 4h8a4 4 0 1 1 0 8H6z'
     />
   </svg>
 );

@@ -12,7 +12,7 @@ const SvgAlignLetterRight = ({ title, titleId, ...props }) => (
     {title ? <title id={titleId}>{title}</title> : null}
     <path
       fill='#000'
-      d='M10 4h11a1 1 0 1 0 0-2H10a1 1 0 0 0 0 2Zm11 16H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Zm0-14H3a1 1 0 0 0 0 2h18a1 1 0 1 0 0-2Zm0 10H11a1 1 0 0 0 0 2h10a1 1 0 0 0 0-2Zm0-6H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Z'
+      d='M10 4h11a1 1 0 1 0 0-2H10a1 1 0 0 0 0 2m11 16H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2m0-14H3a1 1 0 0 0 0 2h18a1 1 0 1 0 0-2m0 10H11a1 1 0 0 0 0 2h10a1 1 0 0 0 0-2m0-6H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2'
     />
   </svg>
 );

@@ -12,7 +12,7 @@ const SvgEllipsisV = ({ title, titleId, ...props }) => (
     {title ? <title id={titleId}>{title}</title> : null}
     <path
       fill='#000'
-      d='M12 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0-7a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z'
+      d='M12 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m0 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4m0-7a2 2 0 1 0 0 4 2 2 0 0 0 0-4'
     />
   </svg>
 );

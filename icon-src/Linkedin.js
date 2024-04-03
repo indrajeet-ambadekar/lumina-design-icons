@@ -15,7 +15,7 @@ const SvgLinkedin = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M6 9H2v12h4V9ZM16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6v0ZM4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z'
+      d='M6 9H2v12h4zM16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6M4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4'
     />
   </svg>
 );

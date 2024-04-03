@@ -15,7 +15,7 @@ const SvgAward = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M12 15a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z'
+      d='M12 15a7 7 0 1 0 0-14 7 7 0 0 0 0 14'
     />
     <path
       stroke='#000'

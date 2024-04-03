@@ -15,14 +15,14 @@ const SvgToggleLeft = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M16 5H8a7 7 0 0 0 0 14h8a7 7 0 1 0 0-14Z'
+      d='M16 5H8a7 7 0 0 0 0 14h8a7 7 0 1 0 0-14'
     />
     <path
       stroke='#000'
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M8 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z'
+      d='M8 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6'
     />
   </svg>
 );

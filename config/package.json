@@ -1,6 +1,6 @@
 {
   "name": "lumina-design-icons",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "A lightweight UI Icons library built for React applications",
   "main": "index.js",
   "scripts": {

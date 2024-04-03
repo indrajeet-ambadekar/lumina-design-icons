@@ -17,8 +17,8 @@ const SvgMicOff = ({ title, titleId, ...props }) => (
       strokeWidth={2}
       clipPath='url(#mic-off_svg__a)'
     >
-      <path d='M8 23h8M1 1l22 22M15 9.34V4a3 3 0 0 0-5.94-.6M9 9v3a3 3 0 0 0 5.12 2.12L9 9Z' />
-      <path d='M17 16.95A7 7 0 0 1 5 12v-2m14 0v2c0 .412-.037.824-.11 1.23M12 19v4' />
+      <path d='M8 23h8M1 1l22 22M15 9.34V4a3 3 0 0 0-5.94-.6M9 9v3a3 3 0 0 0 5.12 2.12z' />
+      <path d='M17 16.95A7 7 0 0 1 5 12v-2m14 0v2q0 .62-.11 1.23M12 19v4' />
     </g>
     <defs>
       <clipPath id='mic-off_svg__a'>

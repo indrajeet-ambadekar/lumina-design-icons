@@ -15,7 +15,7 @@ const SvgMusic = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M6 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z'
+      d='M6 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6'
     />
     <path
       stroke='#000'
@@ -29,7 +29,7 @@ const SvgMusic = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M18 19a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z'
+      d='M18 19a3 3 0 1 0 0-6 3 3 0 0 0 0 6'
     />
   </svg>
 );

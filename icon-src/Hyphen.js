@@ -10,7 +10,7 @@ const SvgHyphen = ({ title, titleId, ...props }) => (
     {...props}
   >
     {title ? <title id={titleId}>{title}</title> : null}
-    <path fill='#000' d='M19 11H5a1 1 0 0 0 0 2h14a1 1 0 0 0 0-2Z' />
+    <path fill='#000' d='M19 11H5a1 1 0 0 0 0 2h14a1 1 0 0 0 0-2' />
   </svg>
 );
 export default SvgHyphen;

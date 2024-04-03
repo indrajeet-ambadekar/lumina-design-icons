@@ -22,7 +22,7 @@ const SvgPrinter = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M18 14H6v8h12v-8ZM6 9V2h12v7'
+      d='M18 14H6v8h12zM6 9V2h12v7'
     />
   </svg>
 );

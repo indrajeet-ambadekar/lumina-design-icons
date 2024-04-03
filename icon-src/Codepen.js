@@ -15,7 +15,7 @@ const SvgCodepen = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='m12 2 10 6.5v7L12 22 2 15.5v-7L12 2ZM12 22v-6.5'
+      d='m12 2 10 6.5v7L12 22 2 15.5v-7zM12 22v-6.5'
     />
     <path
       stroke='#000'

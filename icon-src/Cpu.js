@@ -17,8 +17,8 @@ const SvgCpu = ({ title, titleId, ...props }) => (
       strokeWidth={2}
       clipPath='url(#cpu_svg__a)'
     >
-      <path d='M18 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z' />
-      <path d='M15 9H9v6h6V9ZM9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3' />
+      <path d='M18 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2' />
+      <path d='M15 9H9v6h6zM9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3' />
     </g>
     <defs>
       <clipPath id='cpu_svg__a'>

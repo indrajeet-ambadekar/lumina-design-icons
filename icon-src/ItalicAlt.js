@@ -12,7 +12,7 @@ const SvgItalicAlt = ({ title, titleId, ...props }) => (
     {title ? <title id={titleId}>{title}</title> : null}
     <path
       fill='#000'
-      d='M17 6h-6a1 1 0 1 0 0 2h1.52l-3.2 8H7a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2h-1.52l3.2-8H17a1 1 0 1 0 0-2Z'
+      d='M17 6h-6a1 1 0 1 0 0 2h1.52l-3.2 8H7a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2h-1.52l3.2-8H17a1 1 0 1 0 0-2'
     />
   </svg>
 );

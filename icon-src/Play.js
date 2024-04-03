@@ -15,7 +15,7 @@ const SvgPlay = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='m5 3 14 9-14 9V3Z'
+      d='m5 3 14 9-14 9z'
     />
   </svg>
 );

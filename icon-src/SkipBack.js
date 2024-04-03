@@ -15,7 +15,7 @@ const SvgSkipBack = ({ title, titleId, ...props }) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M5 19V5M19 20 9 12l10-8v16Z'
+      d='M5 19V5M19 20 9 12l10-8z'
     />
   </svg>
 );
